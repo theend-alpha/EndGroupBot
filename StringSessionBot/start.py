@@ -33,7 +33,7 @@ async def gstart(_, message: Message):
                      ]
          ]
 
-@Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command("start") & ~filters.private & ~filters.channel) 
 async def gstart(_, message: Message):
     await msg.reply_text(
         f""" 💫The End✨ Is Alive .\n\n Used to generate string session. """
