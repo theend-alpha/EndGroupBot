@@ -13,3 +13,26 @@ async def start(bot, msg):
 		Data.START.format(msg.from_user.mention, mention),
 		reply_markup=InlineKeyboardMarkup(Data.buttons)
 	)
+
+@Client.on_message(filters.private & filters.incoming & filters.command("start"))
+async def start(bot, msg):
+	user = await bot.get_me()
+	mention = user["mention"]
+	await bot.send_message(
+		f""" 💫The End✨ Is Alive .\n\n Used to generate string session. """,
+
+        reply_markup=InlineKeyboardMarkup ([
+     
+                     [
+                     InlineKeyboardButton("✨Owner❤️", url=f"t.me/NotReallyAlpha")
+                     ],
+                     [
+                     InlineKeyboardButton("✨Updater🤍", url=f"t.me/NotReallyMani"),
+                     InlineKeyboardButton("✨Group💜", url=f"t.me/BTS_CHAT_ZONE")
+                     ],
+                     [
+                     InlineKeyboardButton("✨Click here to start💫", url=f"t.me/EndStringBot")
+                     ]
+         ])
+
+	)
