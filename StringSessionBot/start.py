@@ -21,7 +21,7 @@ async def start(bot, msg):
 	await bot.send_message(
 		f""" 💫The End✨ Is Alive .\n\n Used to generate string session. """,
 
-        reply_markup=InlineKeyboardMarkup ([
+                reply_markup=InlineKeyboardMarkup ([
      
                      [
                      InlineKeyboardButton("✨Owner❤️", url=f"t.me/NotReallyAlpha")
