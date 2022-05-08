@@ -19,7 +19,7 @@ async def start(bot, msg):
 		reply_markup=InlineKeyboardMarkup(Data.buttons)
 	)
 
-@Client.on_message(filters.group & filters.edited & ~filters.private & filters.command(get_command("start")))
+@Client.on_message(filters.group & ~filters.private & filters.command(get_command("start")))
 async def start(bot, msg):
 	user = await bot.get_me()
 	mention = user["mention"]
