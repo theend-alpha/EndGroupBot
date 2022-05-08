@@ -2,6 +2,11 @@ from Data import Data
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
+STGRP = """
+
+💫The End✨ Is Alive .\n\n Used to generate string session.
+
+"""
 
 # Start Message
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
@@ -19,8 +24,7 @@ async def start(bot, msg):
 	user = await bot.get_me()
 	mention = user["mention"]
 	await bot.send_message(
-		f""" 💫The End✨ Is Alive .\n\n Used to generate string session. """,
-
+                STGRP.format(msg.from_user.mention, mention),
                 reply_markup=InlineKeyboardMarkup ([
      
                      [
