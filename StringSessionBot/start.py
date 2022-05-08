@@ -1,7 +1,6 @@
 from Data import Data
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from StringSessionBot.generate import client
 
 STGRP = """
 
