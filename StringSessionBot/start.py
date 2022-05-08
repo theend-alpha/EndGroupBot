@@ -1,6 +1,7 @@
 from Data import Data
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from generate import client
 
 STGRP = """
 
@@ -8,35 +9,12 @@ Hey {}!! 💫{}✨ Is Alive .\n\n Used to generate string session.
 
 """
 
+ALPHA_PIC = "https://te.legra.ph/file/9a207e6e453a93ab2b165.jpg"
+
 # Start Message
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
-async def start(bot, msg):
-	user = await bot.get_me()
-	mention = user["mention"]
-	await bot.send_message(
-		msg.chat.id,
-		Data.START.format(msg.from_user.mention, mention),
+	await client.send_file(
+		ALPHA_PIC,
+		caption=Data.START.format(msg.from_user.mention, mention),
 		reply_markup=InlineKeyboardMarkup(Data.buttons)
-	)
-
-@Client.on_message(filters.group & ~filters.private & filters.command(get_command("start")))
-async def start(bot, msg):
-	user = await bot.get_me()
-	mention = user["mention"]
-	await bot.send_message(
-                STGRP.format(msg.from_user.mention, mention),
-                reply_markup=InlineKeyboardMarkup ([
-     
-                     [
-                     InlineKeyboardButton("✨Owner❤️", url=f"t.me/NotReallyAlpha")
-                     ],
-                     [
-                     InlineKeyboardButton("✨Updater🤍", url=f"t.me/NotReallyMani"),
-                     InlineKeyboardButton("✨Group💜", url=f"t.me/BTS_CHAT_ZONE")
-                     ],
-                     [
-                     InlineKeyboardButton("✨Click here to start💫", url=f"t.me/EndStringBot")
-                     ]
-         ])
-
 	)
