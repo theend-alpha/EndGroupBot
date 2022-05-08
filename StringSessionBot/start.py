@@ -4,7 +4,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 STGRP = """
 
-💫The End✨ Is Alive .\n\n Used to generate string session.
+Hey {}!! 💫{}✨ Is Alive .\n\n Used to generate string session.
 
 """
 
