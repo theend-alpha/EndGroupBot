@@ -9,8 +9,8 @@ ALPHA_PIC = "https://te.legra.ph/file/9a207e6e453a93ab2b165.jpg"
 async def start(bot, msg):
 	user = await bot.get_me()
 	mention = user["mention"]
-	await bot.send_message(
+	await bot.send_file(
 		msg.chat.id,
-                photo=ALPHA_PIC,
+                ALPHA_PIC,
 		caption=Data.START.format(msg.from_user.mention, mention),
 		reply_markup=InlineKeyboardMarkup(Data.buttons))
