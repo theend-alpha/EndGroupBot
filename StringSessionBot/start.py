@@ -1,6 +1,6 @@
 from Data import Data
-from pyrogram import Client, filters, Message
-from pyrogram.types import InlineKeyboardMarkup
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, Message
 
 ALPHA_PIC = "https://te.legra.ph/file/9a207e6e453a93ab2b165.jpg"
 
