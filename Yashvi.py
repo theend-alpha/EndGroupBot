@@ -46,4 +46,15 @@ $ If any suggestions  ••>>  [Alpha](t.me/NotReallyAlpha)
 """
 
     # command buttons
-    command_buttons = 
+    command_buttons = [
+           [InlineKeyboardButton("Click here to Generate", callback_data="generate")],
+           [InlineKeyboardButton(text="✨Back🕊", callback_data="home")],
+           [InlineKeyboardButton(text="✨Alpha Version💫", callback_data="alphaversion")]
+    ]
+
+    # version buttons
+    version_buttons = [
+           [InlineKeyboardButton("Click here to Generate", callback_data="generate")],
+           [InlineKeyboardButton(text="✨Back🕊", callback_data="home")],
+           [InlineKeyboardButton(text="✨Commands💫", callback_data="cmda")]
+    ]
