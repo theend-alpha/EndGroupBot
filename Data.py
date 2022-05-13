@@ -49,7 +49,7 @@ class Data:
 
 ____
 
-Thx for using our bot ! ✨💫
+ᴛʜx ғᴏʀ ᴜsɪɴɢ ᴏᴜʀ ʙᴏᴛ ! ✨💫
 
 """
 
