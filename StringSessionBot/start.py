@@ -2,7 +2,7 @@ from Data import Data
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
-photo = "https://te.legra.ph/file/9a207e6e453a93ab2b165.jpg"
+photo = "https://te.legra.ph/file/ea5ae1ac096f1d9034100.jpg"
 
 # Start Message
 @Client.on_message(filters.private & filters.incoming & filters.command("start"))
