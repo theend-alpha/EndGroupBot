@@ -50,7 +50,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             message_id=message_id,
             text=Keshav.CMDA,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(Data.home_buttons),
+            reply_markup=InlineKeyboardMarkup(Keshav.command_buttons),
          )
     elif query == "alphaversion":
         chat_id = callback_query.from_user.id
@@ -60,7 +60,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             message_id=message_id,
             text=Keshav.ALPHAVERSION,
             disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(Data.home_buttons),
+            reply_markup=InlineKeyboardMarkup(Keshav.version_buttons),
         )
     elif query == "generate":
         await callback_query.message.reply(
