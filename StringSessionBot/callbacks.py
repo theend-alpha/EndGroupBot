@@ -38,7 +38,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         await bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
-            text="** Perfect Tutorial by Alpha**\n" + Data.HELP,
+            text="** ᴘᴇʀғᴇᴄᴛ ᴛᴜᴛᴏʀɪᴀʟ ʙʏ ᴀʟᴘʜᴀ**\n" + Data.HELP,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Data.home_buttons),
         )
