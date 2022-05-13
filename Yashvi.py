@@ -12,12 +12,9 @@ class Keshav:
 
     # Commands
     CMDA = """
-**Available commands in Alpha Bot**
+** ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴀʟᴘʜᴀ ʙᴏᴛ**
 
-/start    - To start the bot ✨💫
-/generate - To start string generation !
-/help     - To view the tutorial.
-/about    - Details to contact the developer !
+/sᴛᴀʀᴛ - ᴛᴏ sᴛᴀʀᴛ ᴛʜᴇ ʙᴏᴛ ✨💫\n\n/ɢᴇɴᴇʀᴀᴛᴇ - ᴛᴏ sᴛᴀʀᴛ sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛɪᴏɴ !\n\n/ʜᴇʟᴘ - ᴛᴏ ᴠɪᴇᴡ ᴛʜᴇ ᴛᴜᴛᴏʀɪᴀʟ.\n\n/ᴀʙᴏᴜᴛ - ᴅᴇᴛᴀɪʟs ᴛᴏ ᴄᴏɴᴛᴀᴄᴛ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ !\n\n/ᴀʟᴘʜᴀᴠᴇʀsɪᴏɴ - ᴋɴᴏᴡ ᴀʙᴏᴜᴛ ᴄᴜʀʀᴇɴᴛ ᴠᴇʀsɪᴏɴ ᴍᴏʀᴇ !
 
 """
 
