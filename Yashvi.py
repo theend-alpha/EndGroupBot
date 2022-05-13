@@ -44,3 +44,6 @@ _____
 $ If any suggestions  ••>>  [Alpha](t.me/NotReallyAlpha)
 
 """
+
+    # command buttons
+    command_buttons = 
