@@ -10,5 +10,4 @@ async def _alphaversion(bot, msg):
         msg.chat.id,
         Keshav.ALPHAVERSION,
         disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(Data.home_buttons),
     )
