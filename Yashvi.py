@@ -22,23 +22,7 @@ class Keshav:
     ALPHAVERSION = """
 **Alpha Version**
 
-$ Version Name    - end.2.0
-$ Version started - 01/05/2022
-$ Updated by      - [Alpha](t.me/NotReallyAlpha)
-
-**Updated features**
-
-$ Added "commands" button for new users !
-$ Added "Alpha Version" button !
-$ Bug fixes 
-
-**Upcoming update**
-
-$ you can see next update on 15/05/2022 !
-$ going to add cool pic : when the user starts the bot !
-
-_____
-$ If any suggestions  ••>>  [Alpha](t.me/NotReallyAlpha)
+•••> ᴠᴇʀsɪᴏɴ ɴᴀᴍᴇ - ᴇɴᴅ.𝟹.𝟶\n\n•••> ᴠᴇʀsɪᴏɴ sᴛᴀʀᴛᴇᴅ - 𝟷𝟹/𝟶𝟻/𝟸𝟶𝟸𝟸\n\n•••> ᴜᴘᴅᴀᴛᴇᴅ ʙʏ - [ᴀʟᴘʜᴀ](t.me/NotReallyAlpha)\n\n**ᴜᴘᴅᴀᴛᴇᴅ ғᴇᴀᴛᴜʀᴇs**\n\n•••> ᴀᴅᴅᴇᴅ ᴄᴏᴏʟ ᴘɪᴄ ᴡʜᴇɴ ᴛʜᴇ ᴜsᴇʀ sᴛᴀʀᴛs ᴛʜᴇ ʙᴏᴛ, ᴡɪʟʟ ᴅɪsᴘʟᴀʏᴇᴅ\n\n•••> ᴀᴅᴅᴇᴅ ᴀᴛᴛʀᴀᴄᴛɪᴠᴇ ᴄʜᴀʀᴀᴄᴛᴇʀs ᴏɴ ʙᴜᴛᴛᴏɴs\n\n•••> ᴏɴʟɪɴᴇ 𝟸𝟺/𝟽\n\n•••> ʙᴜɢ ғɪxᴇs 🛠\n\n•••> ᴀɴʏ ᴍᴏʀᴇ ɪᴅᴇᴀs ғᴏʀᴡᴀʀᴅ ᴛʜᴇᴍ ᴛᴏ [ʜɪᴍ](t.me/NotReallyAlpha)
 
 """
 
