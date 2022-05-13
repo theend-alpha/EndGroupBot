@@ -4,22 +4,17 @@ from pyrogram.types import InlineKeyboardButton
 class Data:
     # Start Message
     START = """
-Hey {}!! Nice to see ya here !
 
-Welcome to {} Made by Alpha © 
-
-End Version - end.2.0 ©
-
-Last updated - 01/05/2022
+ʜᴇʏ {}!! ɴɪᴄᴇ ᴛᴏ sᴇᴇ ʏᴀ ʜᴇʀᴇ ! ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {} ᴍᴀᴅᴇ ʙʏ ᴀʟᴘʜᴀ ©\n\nᴇɴᴅ ᴠᴇʀsɪᴏɴ - ᴇɴᴅ.𝟹.𝟶 ©\n\nʟᴀsᴛ ᴜᴘᴅᴀᴛᴇᴅ - 𝟷𝟹/𝟶𝟻/𝟸𝟶𝟸𝟸
 
     """
 
     # Home Button
     home_buttons = [
         [InlineKeyboardButton("Click here to Generate", callback_data="generate")],
-        [InlineKeyboardButton(text=" Back ", callback_data="home")],
-        [InlineKeyboardButton(text=" Commands ", callback_data="cmda")],
-        [InlineKeyboardButton(text=" Version ", callback_data="alphaversion")]
+        [InlineKeyboardButton(text="✨Back🕊", callback_data="home")],
+        [InlineKeyboardButton(text="✨Commands💫 ", callback_data="cmda")],
+        [InlineKeyboardButton(text="✨Alpha Version💫", callback_data="alphaversion")]
     ]
 
     generate_button = [
@@ -27,35 +22,31 @@ Last updated - 01/05/2022
     ]
 
     support_button = [
-        [InlineKeyboardButton("Group", url="https://t.me/BTS_CHAT_ZONE")]
+        [InlineKeyboardButton("✨Group💜", url="https://t.me/BTS_CHAT_ZONE")]
     ]
 
     # Rest Buttons
     buttons = [
         [InlineKeyboardButton("Click here to Generate", callback_data="generate")],
         [
-            InlineKeyboardButton("Tutorial", callback_data="help"),
-            InlineKeyboardButton("Contact", callback_data="about")
+            InlineKeyboardButton("✨Tutorial🛠", callback_data="help"),
+            InlineKeyboardButton("✨Contact❄️", callback_data="about")
         ],
         [
-            InlineKeyboardButton("Owner", url="https://t.me/NotReallyAlpha"),
-            InlineKeyboardButton("Group", url="https://t.me/BTS_CHAT_ZONE")
+            InlineKeyboardButton("✨Owner❤️", url="https://t.me/NotReallyAlpha"),
+            InlineKeyboardButton("✨Group💜", url="https://t.me/BTS_CHAT_ZONE")
         ],
         [
-            InlineKeyboardButton(" Commands ", callback_data="cmda"),
-            InlineKeyboardButton(" Alphaversion ", callback_data="alphaversion")
+            InlineKeyboardButton("✨Commands💫", callback_data="cmda"),
+            InlineKeyboardButton("✨Alpha version💫", callback_data="alphaversion")
         ],  
     ]
 
     # Help Message
     HELP = """
 
-» click on generate button ; Then you'll get to see two buttons 
-» 1.Pyrogram - For music bots 
-» 2.Telethon - For all bots except music one !
-» Choose what ya want ! 
-» Submit API ID , API HASH , NUMBER , CODE !
-» STRING WILL BE SENT TO SAVED MESSAGES ! ✨💫
+» ᴄʟɪᴄᴋ ᴏɴ ɢᴇɴᴇʀᴀᴛᴇ ʙᴜᴛᴛᴏɴ ; ᴛʜᴇɴ ʏᴏᴜ'ʟʟ ɢᴇᴛ ᴛᴏ sᴇᴇ ᴛᴡᴏ ʙᴜᴛᴛᴏɴs\n\n» 𝟷.ᴘʏʀᴏɢʀᴀᴍ - ғᴏʀ ᴍᴜsɪᴄ ʙᴏᴛs\n\n» 𝟸.ᴛᴇʟᴇᴛʜᴏɴ - ғᴏʀ ᴀʟʟ ʙᴏᴛs ᴇxᴄᴇᴘᴛ ᴍᴜsɪᴄ ᴏɴᴇ !\n\n» ᴄʜᴏᴏsᴇ ᴡʜᴀᴛ ʏᴀ ᴡᴀɴᴛ !\n\n» sᴜʙᴍɪᴛ ᴀᴘɪ ɪᴅ , ᴀᴘɪ ʜᴀsʜ , ɴᴜᴍʙᴇʀ , ᴄᴏᴅᴇ !\n\n» sᴛʀɪɴɢ ᴡɪʟʟ ʙᴇ sᴇɴᴛ ᴛᴏ sᴀᴠᴇᴅ ᴍᴇssᴀɢᴇs ! ✨💫
+
 ____
 
 Thx for using our bot ! ✨💫
@@ -64,48 +55,9 @@ Thx for using our bot ! ✨💫
 
     # About Message
     ABOUT = """
-** Alpha String Bot © **
+** ᴀʟᴘʜᴀ sᴛʀɪɴɢ ʙᴏᴛ © **
 
-Bot to generate session with privacy ! [©](https://t.me/NotReallyAlpha) 
-
-[𝐃𝐄𝐯𝐄𝐬𝐇](https://t.me/iTz_DEv_xD) | [𝐀𝐋𝐏𝐇𝐀](https://t.me/NotReallyAlpha)
-
-Language Used : Python
-           
-Contact Owner and Developers [here](https://t.me/BTS_CHAT_ZONE) 
-"""
-
-    # Commands
-    CMDA = """
-**Available commands in Alpha Bot**
-
-/start    - To start the bot ✨💫
-/generate - To start string generation !
-/help     - To view the tutorial.
-/about    - Details to contact the developer !
+ʙᴏᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ ᴡɪᴛʜ ᴘʀɪᴠᴀᴄʏ ! ©\n\n[𝐃𝐄𝐯𝐄𝐬𝐇](ʜᴛᴛᴘs://ᴛ.ᴍᴇ/ɪᴛᴢ_ᴅᴇᴠ_xᴅ) | [𝐀𝐋𝐏𝐇𝐀](ʜᴛᴛᴘs://ᴛ.ᴍᴇ/ɴᴏᴛʀᴇᴀʟʟʏᴀʟᴘʜᴀ)\n\nʟᴀɴɢᴜᴀɢᴇ ᴜsᴇᴅ : ᴘʏᴛʜᴏɴ\n\nᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ ᴀɴᴅ ᴅᴇᴠᴇʟᴏᴘᴇʀs [ʜᴇʀᴇ](t.me/BTS_CHAT_ZONE)
 
 """
 
-    # version
-    ALPHAVERSION = """
-**Alpha Version**
-
-$ Version Name     - end.2.0
-$ Version started  - 01/05/2022
-$ Updated by       - [Alpha](t.me/NotReallyAlpha)
-
-**Updated features**
-
-$ Added "commands" button for new users !
-$ Added "Alpha Version" button !
-$ Bug fixes 
-
-**Upcoming update**
-
-$ you can see next update on 15/05/2022 !
-$ going to add cool pic : when the user starts the bot !
-
-_____
-$ If any suggestions   ••>>  [Alpha](t.me/NotReallyAlpha)
-
-"""
