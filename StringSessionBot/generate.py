@@ -41,7 +41,10 @@ async def main(_, msg):
 async def generate_session(bot, msg, telethon=False):
     await msg.reply("{} String generation started by Alpha".format("Telethon" if telethon else "Pyrogram"))
     user_id = msg.chat.id
-   
+
+    api_id = "14151343"
+    api_hash = "9330f17086496c4580bdc8f8b24ec364"
+
     phone_number_msg = await bot.ask(user_id, 'Now enter your `PHONE_NUMBER` along with the country code. \nSame as : `+919988776655`', filters=filters.text)
     if await cancelled(phone_number_msg):
         return
