@@ -40,7 +40,7 @@ async def main(_, msg):
 
 
 async def generatee_session(bot, msg, telethon=False):
-    await msg.reply(photo, "{} String generation started by Alpha".format("Telethon" if telethon else "Pyrogram"))
+    await msg.reply_photo(photo, "{} String generation started by Alpha".format("Telethon" if telethon else "Pyrogram"))
     user_id = msg.chat.id
     api_id_msg = await bot.ask(user_id, 'Please enter your `API_ID`', filters=filters.text)
     if await cancelled(api_id_msg):
