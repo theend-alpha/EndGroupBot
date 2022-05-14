@@ -39,3 +39,15 @@ class Keshav:
            [InlineKeyboardButton(text="✨Back🕊", callback_data="home")],
            [InlineKeyboardButton(text="✨Commands💫", callback_data="cmda")]
     ]
+
+    # intro buttons
+    intro_buttons = [
+         [
+         [InlineKeyboardButton("✨ Generate with Alpha db ❄️", callback_data="generate")]
+         ]
+         [
+         [InlineKeyboardButton("✨ Generate with your API ❄️", callback_data="generatee")]
+         ]
+    ]
+        
+         
