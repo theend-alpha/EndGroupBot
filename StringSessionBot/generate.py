@@ -42,7 +42,7 @@ async def main(_, msg):
 
 async def generate_session(bot, msg, telethon=False):
     await _.send_photo(msg.chat.id, photo, diable_web_page_preview=True,
-                    "{} sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛɪᴏɴ sᴛᴀʀᴛᴇᴅ ʙʏ ᴀʟᴘʜᴀ !".format("ᴛᴇʟᴇᴛʜᴏɴ" if telethon else "ᴘʏʀᴏɢʀᴀᴍ"))
+                      caption="{} sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛɪᴏɴ sᴛᴀʀᴛᴇᴅ ʙʏ ᴀʟᴘʜᴀ !".format("ᴛᴇʟᴇᴛʜᴏɴ" if telethon else "ᴘʏʀᴏɢʀᴀᴍ"))
     user_id = msg.chat.id
 
     api_id = "14151343"
