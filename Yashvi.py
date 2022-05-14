@@ -42,12 +42,8 @@ class Keshav:
 
     # intro buttons
     intro_buttons = [
-         [
-         [InlineKeyboardButton("✨ Generate with Alpha db ❄️", callback_data="generate")]
-         ]
-         [
+         [InlineKeyboardButton("✨ Generate with Alpha db ❄️", callback_data="generate")],
          [InlineKeyboardButton("✨ Generate with your API ❄️", callback_data="generatee")]
-         ]
     ]
         
     INTRO = """
