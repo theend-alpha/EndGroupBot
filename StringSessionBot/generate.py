@@ -27,6 +27,8 @@ ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
             "sensitive information and for your information : **These kinda error logs are not stored in our database!**"
 
 
+photo = "https://te.legra.ph/file/04c011f0faa6427d2965e.jpg"
+
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate@alpha'))
 async def main(_, msg):
     await msg.reply(
@@ -39,7 +41,8 @@ async def main(_, msg):
 
 
 async def generate_session(bot, msg, telethon=False):
-    await msg.reply("{} String generation started by Alpha".format("ᴛᴇʟᴇᴛʜᴏɴ" if telethon else "ᴘʏʀᴏɢʀᴀᴍ"))
+    await msg.reply(photo,
+                    "{} sᴛʀɪɴɢ ɢᴇɴᴇʀᴀᴛɪᴏɴ sᴛᴀʀᴛᴇᴅ ʙʏ ᴀʟᴘʜᴀ !".format("ᴛᴇʟᴇᴛʜᴏɴ" if telethon else "ᴘʏʀᴏɢʀᴀᴍ"))
     user_id = msg.chat.id
 
     api_id = "14151343"
