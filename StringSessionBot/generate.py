@@ -41,20 +41,9 @@ async def main(_, msg):
 async def generate_session(bot, msg, telethon=False):
     await msg.reply("{} String generation started by Alpha".format("Telethon" if telethon else "Pyrogram"))
     user_id = msg.chat.id
-    api_id_msg = await bot.ask(user_id, 'Please enter your `API_ID`', filters=filters.text)
-    if await cancelled(api_id_msg):
-        return
-    try:
-        api_id = int(api_id_msg.text)
-    except ValueError:
-        await api_id_msg.reply('Not a valid API_ID (which must be an integer). Please start generating session again.', quote=True, reply_markup=InlineKeyboardMarkup(Data.generate_button))
-        return
-    api_hash_msg = await bot.ask(user_id, 'Please enter your `API_HASH`', filters=filters.text)
-    if await cancelled(api_id_msg):
-        return
-    api_hash = api_hash_msg.text
+   
     phone_number_msg = await bot.ask(user_id, 'Now enter your `PHONE_NUMBER` along with the country code. \nSame as : `+919988776655`', filters=filters.text)
-    if await cancelled(api_id_msg):
+    if await cancelled(phone_number_msg):
         return
     phone_number = phone_number_msg.text
     await msg.reply("Sending OTP...")
@@ -76,7 +65,7 @@ async def generate_session(bot, msg, telethon=False):
         return
     try:
         phone_code_msg = await bot.ask(user_id, "Please check for an OTP in official telegram account. If you got it, send OTP here after reading the below format. \nIf OTP is in the form ~ `12345`, **please send it as** `1 2 3 4 5`.", filters=filters.text, timeout=600)
-        if await cancelled(api_id_msg):
+        if await cancelled(phone_number_msg):
             return
     except TimeoutError:
         await msg.reply('Time limit reached of 10 minutes. Please start generating session again.', reply_markup=InlineKeyboardMarkup(Data.generate_button))
@@ -105,7 +94,7 @@ async def generate_session(bot, msg, telethon=False):
                 await client.sign_in(password=password)
             else:
                 await client.check_password(password=password)
-            if await cancelled(api_id_msg):
+            if await cancelled(phone_number_msg):
                 return
         except (PasswordHashInvalid, PasswordHashInvalidError):
             await two_step_msg.reply('Invalid Password Provided. Please start generating session again.', quote=True, reply_markup=InlineKeyboardMarkup(Data.generate_button))
