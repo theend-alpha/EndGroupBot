@@ -120,7 +120,7 @@ async def generatee_session(bot, msg, telethon=False):
             pass
     else:
         string_session = await client.export_session_string()
-    L_PIC = "https://te.legra.ph/file/7eca25523f111376fc5e2.jpg"
+    L_PIC = "https://te.legra.ph/file/3c456b07d57b09e5098b8.jpg"
     if telethon:
         await client.send_file("me", L_PIC, caption="**{} - STRING SESSION** \n\n`{}`\n\n• __Dont Share String Session With Anyone__\n• __Dont Invite Anyone To Heroku__".format("TELETHON" if telethon else "PYROGRAM", string_session))
     else:
