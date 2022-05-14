@@ -27,7 +27,7 @@ ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
             "sensitive information and for your information : **These kinda error logs are not stored in our database!**"
 
 
-@Client.on_message(filters.private & ~filters.forwarded & filters.command('generate'))
+@Client.on_message(filters.private & ~filters.forwarded & filters.command('generate@api'))
 async def main(_, msg):
     await msg.reply(
         "Choose which type of session you needed !",
