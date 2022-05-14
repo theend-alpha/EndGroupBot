@@ -27,7 +27,7 @@ ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
             "sensitive information and for your information : **These kinda error logs are not stored in our database!**"
 
 
-photo = "https://te.legra.ph/file/04c011f0faa6427d2965e.jpg"
+photo = "https://te.legra.ph/file/601603022035e64d435be.jpg"
 
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate@alpha'))
 async def main(_, msg):
