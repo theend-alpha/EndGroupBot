@@ -38,7 +38,7 @@ async def main(_, msg):
     )
 
 
-async def generate_session(bot, msg, telethon=False):
+async def generatee_session(bot, msg, telethon=False):
     await msg.reply("{} String generation started by Alpha".format("Telethon" if telethon else "Pyrogram"))
     user_id = msg.chat.id
     api_id_msg = await bot.ask(user_id, 'Please enter your `API_ID`', filters=filters.text)
