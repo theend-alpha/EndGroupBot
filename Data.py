@@ -11,14 +11,14 @@ class Data:
 
     # Home Button
     home_buttons = [
-        [InlineKeyboardButton("Click here to Generate", callback_data="generate")],
+        [InlineKeyboardButton("Click here to Generate", callback_data="intro")],
         [InlineKeyboardButton(text="✨Back🕊", callback_data="home")],
         [InlineKeyboardButton(text="✨Commands💫 ", callback_data="cmda")],
         [InlineKeyboardButton(text="✨Alpha Version💫", callback_data="alphaversion")]
     ]
 
     generate_button = [
-        [InlineKeyboardButton("Click here to Generate", callback_data="generate")]
+        [InlineKeyboardButton("Click here to Generate", callback_data="intro")]
     ]
 
     support_button = [
@@ -27,7 +27,7 @@ class Data:
 
     # Rest Buttons
     buttons = [
-        [InlineKeyboardButton("Click here to Generate", callback_data="generate")],
+        [InlineKeyboardButton("Click here to Generate", callback_data="intro")],
         [
             InlineKeyboardButton("✨Tutorial🛠", callback_data="help"),
             InlineKeyboardButton("✨Contact❄️", callback_data="about")
