@@ -76,8 +76,8 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
         await callback_query.message.reply(
             "Choose which type of session you needed !",
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Pyrogram Session", callback_data="pyrogram"),
-                InlineKeyboardButton("Telethon Session", callback_data="telethon")
+                InlineKeyboardButton("Pyrogram Session", callback_data="pyrograme"),
+                InlineKeyboardButton("Telethon Session", callback_data="telethone")
             ]])
         )
     elif query == "generate":
@@ -97,10 +97,11 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 await generate_session(bot, callback_query.message, telethon=True)
         except Exception as e:
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
-    elif query in ["pyrogram", "telethon"]:
+ 
+   elif query in ["pyrograme", "telethone"]:
         await callback_query.answer()
         try:
-            if query == "pyrogram":
+            if query == "pyrograme":
                 await generatee_session(bot, callback_query.message)
             else:
                 await generatee_session(bot, callback_query.message, telethon=True)
