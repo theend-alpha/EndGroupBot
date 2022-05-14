@@ -79,7 +79,7 @@ async def generatee_session(bot, msg, telethon=False):
     try:
         phone_number_msg = await bot.ask(user_id, 'ɴᴏᴡ ᴇɴᴛᴇʀ ʏᴏᴜʀ `ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` ᴀʟᴏɴɢ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ. \nsᴀᴍᴇ ᴀs : `+𝟿𝟷𝟿𝟿𝟾𝟾𝟽𝟽𝟼𝟼𝟻𝟻`', filters=filters.text)
         if await cancelled(api_id_msg):
-        return
+            return
     phone_number = phone_number_msg.text
     await msg.reply("sᴇɴᴅɪɴɢ ᴏᴛᴘ...")
     if telethon:
