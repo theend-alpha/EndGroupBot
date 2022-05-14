@@ -72,6 +72,7 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             text=Keshav.INTRO,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(Keshav.intro_buttons),
+        )
     elif query == "generatee":
         await callback_query.message.reply(
             "Choose which type of session you needed !",
