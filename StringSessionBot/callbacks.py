@@ -97,3 +97,12 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
                 await generate_session(bot, callback_query.message, telethon=True)
         except Exception as e:
             await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
+    elif query in ["pyrogram", "telethon"]:
+        await callback_query.answer()
+        try:
+            if query == "pyrogram":
+                await generatee_session(bot, callback_query.message)
+            else:
+                await generatee_session(bot, callback_query.message, telethon=True)
+        except Exception as e:
+            await callback_query.message.reply(ERROR_MESSAGE.format(str(e)))
