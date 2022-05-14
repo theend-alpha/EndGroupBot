@@ -26,6 +26,7 @@ ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
             "\n\nPlease forward this to @BTS_CHAT_ZONE if this message doesn't contain any " \
             "sensitive information and for your information : **These kinda error logs are not stored in our database!**"
 
+photo = "https://te.legra.ph/file/ad6fc820814b936c57820.jpg"
 
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate'))
 async def main(_, msg):
@@ -39,7 +40,7 @@ async def main(_, msg):
 
 
 async def generatee_session(bot, msg, telethon=False):
-    await msg.reply("{} String generation started by Alpha".format("Telethon" if telethon else "Pyrogram"))
+    await msg.reply(photo, "{} String generation started by Alpha".format("Telethon" if telethon else "Pyrogram"))
     user_id = msg.chat.id
     api_id_msg = await bot.ask(user_id, 'Please enter your `API_ID`', filters=filters.text)
     if await cancelled(api_id_msg):
