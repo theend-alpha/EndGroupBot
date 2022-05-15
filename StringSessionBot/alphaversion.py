@@ -9,5 +9,4 @@ photo = "https://te.legra.ph/file/1fec31d4b0f3700dc9e90.jpg"
 async def _alphaversion(bot, msg: Message):
     await bot.send_photo(
        photo,
-       caption=Keshav.ALPHAVERSION,
-    )
+       caption=Keshav.ALPHAVERSION)
