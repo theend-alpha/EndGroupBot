@@ -5,6 +5,7 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardBu
 from StringSessionBot.generate import generate_session, ERROR_MESSAGE
 from StringSessionBot.generatee import generatee_session, ERROR_MESSAGE
 
+alpha = "https://te.legra.ph/file/ca0fa4f4e821944ad08da.jpg"
 
 # Callbacks
 @Client.on_callback_query()
@@ -74,19 +75,19 @@ async def _callbacks(bot: Client, callback_query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(Keshav.intro_buttons),
         )
     elif query == "generatee":
-        await callback_query.message.reply(
-            "Choose which type of session you needed !",
+        await callback_query.message.reply_photo(alpha,
+            caption="ᴄʜᴏᴏsᴇ ᴡʜɪᴄʜ ᴛʏᴘᴇ ᴏғ sᴇssɪᴏɴ ʏᴏᴜ ɴᴇᴇᴅᴇᴅ !",
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Pyrogram Session", callback_data="pyrograme"),
-                InlineKeyboardButton("Telethon Session", callback_data="telethone")
+                InlineKeyboardButton("ᴘʏʀᴏɢʀᴀᴍ sᴇssɪᴏɴ", callback_data="pyrograme"),
+                InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ", callback_data="telethone")
             ]])
         )
     elif query == "generate":
-        await callback_query.message.reply(
-            "Choose which type of session you needed !",
+        await callback_query.message.reply_photo(alpha,
+            caption="ᴄʜᴏᴏsᴇ ᴡʜɪᴄʜ ᴛʏᴘᴇ ᴏғ sᴇssɪᴏɴ ʏᴏᴜ ɴᴇᴇᴅᴇᴅ !",
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("Pyrogram Session", callback_data="pyrogram"),
-                InlineKeyboardButton("Telethon Session", callback_data="telethon")
+                InlineKeyboardButton("ᴘʏʀᴏɢʀᴀᴍ sᴇssɪᴏɴ", callback_data="pyrogram"),
+                InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ", callback_data="telethon")
             ]])
         )
     elif query in ["pyrogram", "telethon"]:
