@@ -7,7 +7,7 @@ photo = "https://te.legra.ph/file/1fec31d4b0f3700dc9e90.jpg"
 
 @Client.on_message(filters.private & filters.incoming & filters.command("alphaversion"))
 async def _alphaversion(bot, msg: Message):
-    await msg.reply_photo(photo,
+    await bot.send_photo(photo,
         Keshav.ALPHAVERSION,
         disable_web_page_preview=True,
     )
