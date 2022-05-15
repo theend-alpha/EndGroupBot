@@ -30,7 +30,7 @@ photo = "https://te.legra.ph/file/ad6fc820814b936c57820.jpg"
 
 alpha = "https://te.legra.ph/file/ca0fa4f4e821944ad08da.jpg"
 
-@Client.on_message(filters.private & ~filters.forwarded & filters.command('generate'))
+@Client.on_message(filters.private & ~filters.forwarded & filters.command('generate@api'))
 async def main(_, msg):
     await msg.reply_photo(alpha,
         caption="ᴄʜᴏᴏsᴇ ᴡʜɪᴄʜ ᴛʏᴘᴇ ᴏғ sᴇssɪᴏɴ ʏᴏᴜ ɴᴇᴇᴅᴇᴅ !",
