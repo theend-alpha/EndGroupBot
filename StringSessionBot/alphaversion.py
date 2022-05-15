@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardMarkup, Message
 
 photo = "https://te.legra.ph/file/1fec31d4b0f3700dc9e90.jpg"
 
-@Client.on_message(filters.private & filters.incoming & filters.command("start"))
+@Client.on_message(filters.private & filters.incoming & filters.command("version"))
 async def start(bot, message: Message):
    user = await bot.get_me()
    mention = user["mention"]
