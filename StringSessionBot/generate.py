@@ -29,10 +29,12 @@ ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
 
 photo = "https://te.legra.ph/file/601603022035e64d435be.jpg"
 
+alpha = "https://te.legra.ph/file/ca0fa4f4e821944ad08da.jpg"
+
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate@alpha'))
 async def main(_, msg):
-    await msg.reply(
-        "ᴄʜᴏᴏsᴇ ᴡʜɪᴄʜ ᴛʏᴘᴇ ᴏғ sᴇssɪᴏɴ ʏᴏᴜ ɴᴇᴇᴅᴇᴅ !",
+    await msg.reply_photo(alpha,
+        caption="ᴄʜᴏᴏsᴇ ᴡʜɪᴄʜ ᴛʏᴘᴇ ᴏғ sᴇssɪᴏɴ ʏᴏᴜ ɴᴇᴇᴅᴇᴅ !",
         reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton("ᴘʏʀᴏɢʀᴀᴍ sᴇssɪᴏɴ", callback_data="pyrogram"),
             InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ", callback_data="telethon")
@@ -48,7 +50,7 @@ async def generate_session(bot, msg, telethon=False):
     api_id = "14151343"
     api_hash = "9330f17086496c4580bdc8f8b24ec364"
 
-    phone_number_msg = await bot.ask(user_id, 'ɴᴏᴡ ᴇɴᴛᴇʀ ʏᴏᴜʀ `ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ` ᴀʟᴏɴɢ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ. \nsᴀᴍᴇ ᴀs : `+𝟿𝟷𝟿𝟿𝟾𝟾𝟽𝟽𝟼𝟼𝟻𝟻`', filters=filters.text)
+    phone_number_msg = await bot.ask(user_id, 'ɴᴏᴡ ᴇɴᴛᴇʀ ʏᴏᴜʀ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ᴀʟᴏɴɢ ᴡɪᴛʜ ᴛʜᴇ ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ. \nsᴀᴍᴇ ᴀs : `+𝟿𝟷𝟿𝟿𝟾𝟾𝟽𝟽𝟼𝟼𝟻𝟻`', filters=filters.text)
     if await cancelled(phone_number_msg):
         return
     phone_number = phone_number_msg.text
