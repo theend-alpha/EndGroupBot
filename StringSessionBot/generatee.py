@@ -28,10 +28,12 @@ ERROR_MESSAGE = "Oops! An exception occurred! \n\n**Error** : {} " \
 
 photo = "https://te.legra.ph/file/ad6fc820814b936c57820.jpg"
 
+alpha = "https://te.legra.ph/file/ca0fa4f4e821944ad08da.jpg"
+
 @Client.on_message(filters.private & ~filters.forwarded & filters.command('generate'))
 async def main(_, msg):
-    await msg.reply(
-        "Choose which type of session you needed !",
+    await msg.reply_photo(alpha,
+        caption="Choose which type of session you needed !",
         reply_markup=InlineKeyboardMarkup([[
             InlineKeyboardButton("ᴘʏʀᴏɢʀᴀᴍ sᴇssɪᴏɴ", callback_data="pyrograme"),
             InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ sᴇssɪᴏɴ", callback_data="telethone")
