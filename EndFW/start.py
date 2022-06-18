@@ -8,5 +8,5 @@ async def (Alpha, Doli: Dev):
     nayan = await Alpha.get_users(uid)
     tara = nayan.mention
     me = await Alpha.get_me()
-    mention = me['mention']
+    mention = me["mention"]
     await Doli.reply(Keshav.START_TXT.format(tara, mention), reply_markup=InlineKeyboardMarkup(Keshav.start_markup))
