@@ -22,14 +22,6 @@ Users.__table__.create(checkfirst=True)
 
 PUsers.__table__.create(checkfirst=True)
 
-def add_user(id):
-    user = YashviAlpha.query(Users).get(id)
-    if not user:
-        adder = Users(id)
-        Yashualpha.add(adder)
-        Yashualpha.commit()
-    else:
-        Yashualpha.close()
 
 def private_user(id):
     user = YashviAlpha.query(PUsers).get(id)
@@ -51,3 +43,12 @@ def get_users():
         return YashuAlpha.query(Users).all()
     finally:
         YashuAlpha.close()
+
+def add_user(id):
+    user = YashviAlpha.query(Users).get(id)
+    if not user:
+        adder = Users(id)
+        Yashualpha.add(adder)
+        Yashualpha.commit()
+    else:
+        Yashualpha.close()
