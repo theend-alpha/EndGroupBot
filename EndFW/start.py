@@ -1,6 +1,7 @@
 from pyrogram import Client as End, filters
 from pyrogram.types import Message as Dev
 from Yashvi import Keshav
+from Config import BOT_USERNAME as bn
 
 @End.on_message(filters.command(["start", f"start@{bn}"]) & ~filters.edited & ~filters.forwarded & ~filters.via_bot & filters.private)
 async def (Alpha, Doli: Dev):
