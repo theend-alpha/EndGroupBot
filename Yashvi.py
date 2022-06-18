@@ -1,5 +1,5 @@
 from pyrogram.types import InlineKeyboardButton
-
+from Config import BOT_USERNAME as bn
 
 class Keshav:
    
@@ -20,3 +20,17 @@ class Keshav:
         ]
 
         
+    HELP_TXT = """ * Commands help *\n\n • /coins - shows your coins 🪙.\n • /superleague - Shows the top players"""
+
+    TUTORIAL_TXT = """ * Tutorial * \n\n ••> First add me to your group by using add button and then check Help section for commands"""
+
+    INFO_TXT = """ * Developers * \n\n currently developed and maintained by - @Deveshi \n\n belongs to @THE_END_NETWORK \n\n * Credits * \n\n Team ~ @THE_END_NETWORK """
+
+    back_markup = [
+        [
+        InlineKeyboardButton(" ➕ Add in your group ➕ ", url = f"https://t.me/{bn}?startgroup=true")
+        ],
+        [
+        InlineKeyboardButton(" 🔙 Back ", callback_data = "back")
+        ]
+        ]
