@@ -10,3 +10,12 @@ class Users(BASE):
        self.uid = uid
 
 Users.__table__.create(checkfirst=True)
+
+def add_user(id):
+    user = YashviAlpha.query(Users).get(id)
+    if not user:
+        adder = Users(id)
+        Yashualpha.add(adder)
+        Yashualpha.commit()
+    else:
+        Yashualpha.close()
