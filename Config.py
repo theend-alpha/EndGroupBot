@@ -15,6 +15,7 @@ if ENVIRONMENT:
     MUST_JOIN = os.environ.get('MUST_JOIN', None)
     #if MUST_JOIN.startswith("@"):
         #MUST_JOIN = MUST_JOIN.replace("@", "")
+    BOT_USERNAME = os.environ.get('BOT_USERNAME', None)
 else:
     # Fill the Values
     API_ID = 0
@@ -25,3 +26,4 @@ else:
     MUST_JOIN = ""
     #if MUST_JOIN.startswith("@"):
        # MUST_JOIN = MUST_JOIN[1:]
+    BOT_USERNAME = os.environ.get('BOT_USERNAME', None)
