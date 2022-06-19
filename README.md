@@ -23,7 +23,7 @@ _____________
 
 - CLICK ON IMAGE BELOW 👇! 
 
-- [![Deploy](https://te.legra.ph/file/036a953de0ad5669ed6e4.jpg)](https://heroku.com/deploy?template=https://github.com/NotReallyAlpha/EndStringBot.git)
+- [![Deploy](https://te.legra.ph/file/036a953de0ad5669ed6e4.jpg)](https://heroku.com/deploy?template=https://github.com/theend-alpha/EndFastWrite.git)
 
 ------------
 
