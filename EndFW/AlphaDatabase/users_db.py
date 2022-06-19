@@ -45,7 +45,7 @@ def get_users():
         YashuAlpha.close()
 
 def add_user(id):
-    user = YashviAlpha.query(Users).get(id)
+    user = YashuAlpha.query(Users).get(id)
     if not user:
         adder = Users(id)
         Yashualpha.add(adder)
