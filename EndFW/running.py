@@ -9,7 +9,7 @@ LIST = [["https://te.legra.ph/file/824249a676c2f7d905d0a.jpg", "january"], ["htt
 async def ready(_, m: Dev):
     global temxt
     now = datetime.datetime.now()
-    while now.minute == 12:
+    while now.minute == 15:
         LIMST = random.choice(LIST)
         pomto = LIMST[0]
         temxt = LIMST[1] 
