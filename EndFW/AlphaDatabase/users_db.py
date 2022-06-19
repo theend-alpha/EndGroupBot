@@ -48,7 +48,7 @@ def add_user(id):
     user = YashuAlpha.query(Users).get(id)
     if not user:
         adder = Users(id)
-        Yashualpha.add(adder)
-        Yashualpha.commit()
+        YashuAlpha.add(adder)
+        YashuAlpha.commit()
     else:
-        Yashualpha.close()
+        YashuAlpha.close()
