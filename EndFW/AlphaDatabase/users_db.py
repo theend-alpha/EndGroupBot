@@ -27,10 +27,10 @@ def private_user(id):
     user = YashuAlpha.query(PUsers).get(id)
     if not user:
         adder = PUsers(id)
-        Yashualpha.add(adder)
-        Yashualpha.commit()
+        YashuAlpha.add(adder)
+        YashuAlpha.commit()
     else:
-        Yashualpha.close()
+        YashuAlpha.close()
 
 def get_pusers():
     try:
