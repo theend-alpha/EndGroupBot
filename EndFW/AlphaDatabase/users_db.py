@@ -24,7 +24,7 @@ PUsers.__table__.create(checkfirst=True)
 
 
 def private_user(id):
-    user = YashviAlpha.query(PUsers).get(id)
+    user = YashuAlpha.query(PUsers).get(id)
     if not user:
         adder = PUsers(id)
         Yashualpha.add(adder)
