@@ -3,7 +3,7 @@ from pyrogram import Client as End, filters
 from pyrogram.types import Message as Dev
 import random
 
-LIST = {["https://te.legra.ph/file/824249a676c2f7d905d0a.jpg", "january"], ["https://te.legra.ph/file/0e41873bc5474eedcb892.jpg", "may"]}
+LIST = [["https://te.legra.ph/file/824249a676c2f7d905d0a.jpg", "january"], ["https://te.legra.ph/file/0e41873bc5474eedcb892.jpg", "may"]]
 
 @End.on_message(filters.command("ready"))
 async def ready(_, m: Dev):
