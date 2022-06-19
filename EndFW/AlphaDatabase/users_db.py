@@ -6,16 +6,16 @@ class Users(BASE):
 
     id = Column(Integer, primary_key=True)
 
-   def __init__(self, id)
-       self.id = id
+    def __init__(self, id)
+        self.id = id
 
 class PUsers(BASE):
     __tablename__ = "pusers"
 
     id = Column(Integer, primary_key=True)
 
-   def __init__(self, id)
-       self.id = id
+    def __init__(self, id)
+        self.id = id
 
 
 Users.__table__.create(checkfirst=True)
