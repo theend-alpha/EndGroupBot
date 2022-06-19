@@ -1,4 +1,4 @@
-from AlphaDatabase import SESSION as YashuAlpha, BASE
+from EndFW.AlphaDatabase import SESSION as YashuAlpha, BASE
 from sqlalchemy import Column, Integer
 
 class Users(BASE):
