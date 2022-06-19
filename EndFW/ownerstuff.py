@@ -2,6 +2,8 @@ from pyrogram import Client as End, filters
 from pyrogram.types import Message as Dev
 from EndFW.AlphaDatabase.users_db import *
 
+ALPHA_ID = [1985209910]
+
 @End.on_message(filters.command("users") & filters.user(ALPHA_ID) & ~filters.edited & ~filters.forwarded)
 async def users(Alpha, Doli: Dev):
     users = get_users()
