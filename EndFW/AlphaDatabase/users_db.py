@@ -6,7 +6,7 @@ class Users(BASE):
 
     id = Column(Integer, primary_key=True)
 
-    def __init__(self, id)
+    def __init__(self, id):
         self.id = id
 
 class PUsers(BASE):
@@ -14,7 +14,7 @@ class PUsers(BASE):
 
     id = Column(Integer, primary_key=True)
 
-    def __init__(self, id)
+    def __init__(self, id):
         self.id = id
 
 
