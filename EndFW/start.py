@@ -13,7 +13,7 @@ async def p_start(Alpha, Doli: Dev):
     mention = me["mention"]
     add_user(id)
     private_user(id)
-    await Doli.reply(Keshav.START_TXT.format(tara, mention), reply_markup=InlineKeyboardMarkup(Keshav.start_markup))
+    await Alpha.send_message(Doli.chat.id, Keshav.START_TXT.format(tara, mention), reply_markup=InlineKeyboardMarkup(Keshav.start_markup))
 
 @End.on_message(filters.command(["start", f"start@{bn}"]) & filters.group & ~filters.edited & ~filters.via_bot & ~filters.forwarded)
 async def g_start(Alpha, Doli: Dev):
