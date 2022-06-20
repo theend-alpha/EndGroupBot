@@ -13,8 +13,13 @@ async def ready(_, m: Dev):
         diff = (75 - now.minute)
     else:
         diff = (15 - now.minute)
-    diff = str(diff)
-    await m.reply(f"{diff} min left ")
+    hehe = diff
+    if hehe > 30:
+        omfoo = (hehe - 30)
+    else:
+        omfoo = (hehe + 30)
+    omfoo = str(omfoo)
+    await m.reply(f"{omfoo} min left ")
     while now.minute == 15:
         LIMST = random.choice(LIST)
         pomto = LIMST[0]
