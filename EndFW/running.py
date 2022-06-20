@@ -20,7 +20,7 @@ async def ready(_, m: Dev):
         omfoo = (hehe + 30)
     omfoo = str(omfoo)
     await m.reply(f"{omfoo} min left ")
-    while now.minute == 15:
+    while now.minute == 45:
         LIMST = random.choice(LIST)
         pomto = LIMST[0]
         temxt = LIMST[1] 
