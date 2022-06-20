@@ -9,6 +9,12 @@ LIST = [["https://te.legra.ph/file/824249a676c2f7d905d0a.jpg", "january"], ["htt
 async def ready(_, m: Dev):
     global temxt
     now = datetime.datetime.now()
+    if now.minute > 15:
+        diff = (75 - now.minute)
+    else:
+        diff = (15 - now.minute)
+    diff = str(diff)
+    await m.reply(f"{diff} min left ")
     while now.minute == 15:
         LIMST = random.choice(LIST)
         pomto = LIMST[0]
