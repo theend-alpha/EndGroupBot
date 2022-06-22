@@ -4,7 +4,7 @@ from EndGB.EndHelpers import *
 
 DEV_P = "https://te.legra.ph/file/229d154445b209c57c34d.jpg"
 
-@End.on_message(filters.command(["start", "start@EndGroupBot"]) & filters.private & ~filters.edited & ~filters.via_bot & ~filters.forwarder)
+@End.on_message(filters.command(["start", "start@EndGroupBot"]) & filters.private & ~filters.edited & ~filters.via_bot & ~filters.forwarded)
 async def start(maharaj, Dev):
     await maharaj.send_photo(Dev.chat.id, DEV_P, caption=START_TXT, reply_markup=InlineKeyboardMarkup(START_MARKUP))
 
