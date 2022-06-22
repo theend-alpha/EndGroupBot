@@ -4,11 +4,10 @@ from EndGB.EndAddons.emotes import *
 
 @End.on_message(filters.command("doli") & ~filters.edited & ~filters.via_bot)
 async def doli(ailika, jhulika: Dev):
-    if jhulika.command != 2:
-        await jhulika.reply("Try: /doli crystal ")
-    elif jhulika.command == 2:
         txt = jhulika.text
         txt = txt.split(None, 1)[1]
+        if txt is None:
+            await jhulika.reply("Try: < /doli crystal >")
         final = ""
         for a in txt:
             a = a.lower()
