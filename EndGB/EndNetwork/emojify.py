@@ -5,9 +5,9 @@ from EndGB.EndAddons.emotes import *
 @End.on_message(filters.command("doli") & ~filters.edited & ~filters.via_bot)
 async def doli(ailika, jhulika: Dev):
         txt = jhulika.text
-        txt = txt.split(None, 1)[1]
-        if not txt:
+        if jhulika.command == 1:
             await jhulika.reply("Try: < /doli crystal >")
+        txt = txt.split(None, 1)[1]
         final = ""
         for a in txt:
             a = a.lower()
