@@ -31,4 +31,4 @@ async def crystal(ailika, jhulika: Dev):
             final += letter
         else:
             final += a
-        await jhulika.reply(final)
+    await jhulika.reply(final)
