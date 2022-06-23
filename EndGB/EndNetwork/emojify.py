@@ -20,8 +20,8 @@ async def doli(ailika, jhulika: Dev):
 @End.on_message(filters.command("crystal") & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def crystal(ailika, jhulika: Dev):
     txt = jhulika.text
-    emoji = txt.split(None, 1)[1]
-    text = txt.split(None, 1)[2]
+    emoji = txt.split(None, 2)[1]
+    text = txt.split(None, 2)[2]
     final = ""
     for a in text:
         a = a.lower()
