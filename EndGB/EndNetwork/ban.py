@@ -17,6 +17,8 @@ async def ban(alpha, keshav: Dev):
     if keshav.from_user.id in ADMINS:
         if keshav.from_user.id in BANNERS:
             await alpha.kick_chat_member(keshav.chat.id, keshav.reply_to_message.from_user.id)
+            await alpha.send_message(keshav.chat.id, BAN_TEXT.format(keshav.reply_to_message.from_user.mention, keshav.from_user.mention))
+        else:
+            await keshav.reply("you don't having ban rights to ban or restrict users !")
 
-        
         
