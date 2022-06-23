@@ -15,7 +15,7 @@ class Admins(BASE):
 
 Admins.__table__.create(checkfirst=True)
 
-def is_admin(str(user_id, str(chat_id)):
+def is_admin(str(user_id), str(chat_id)):
     admin = SESSION.query(Admins).get((str(user_id, str(chat_id))
     if admin:
         return True
