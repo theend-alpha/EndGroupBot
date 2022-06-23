@@ -20,5 +20,6 @@ async def ban(alpha, keshav: Dev):
             await alpha.send_message(keshav.chat.id, BAN_TEXT.format(keshav.reply_to_message.from_user.mention, keshav.from_user.mention))
         else:
             await keshav.reply("you don't having ban rights to ban or restrict users !")
-
-        
+    else:
+        await keshav.reply("You're not an admin to do this !")
+  
