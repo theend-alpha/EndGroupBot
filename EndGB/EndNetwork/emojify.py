@@ -6,7 +6,7 @@ from EndGB.EndAddons.emotes import *
 async def doli(ailika, jhulika: Dev):
         txt = jhulika.text
         txt = txt.split(None, 1)[1]
-        if txt == "":
+        if not txt:
             await jhulika.reply("Try: < /doli crystal >")
         final = ""
         for a in txt:
