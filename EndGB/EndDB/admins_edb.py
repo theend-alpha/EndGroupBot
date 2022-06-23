@@ -31,3 +31,8 @@ def add_admin(str(user_id), str(chat_id)):
     else:
         SESSION.close()
 
+def clear_all_admins():
+    ADMINS = []
+    admins = SESSION.query(Admins).all()
+    
+
