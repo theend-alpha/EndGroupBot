@@ -1,5 +1,5 @@
 from pyrogram import Client as End, filters
-from pyrogram.types import Message as Dev, InlineKeyboardMarkup
+from pyrogram.types import Message as Dev, InlineKeyboardMarkup, InlineKeyboardButton
 from EndGB.EndHelpers import *
 
 DEV_P = "https://te.legra.ph/file/229d154445b209c57c34d.jpg"
