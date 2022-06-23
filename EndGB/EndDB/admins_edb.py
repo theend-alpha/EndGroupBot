@@ -34,5 +34,10 @@ def add_admin(str(user_id), str(chat_id)):
 def clear_all_admins():
     ADMINS = []
     admins = SESSION.query(Admins).all()
+    for admin in admins:
+        ADMINS.append(admin.user_id)
+        for ADMIN in ADMINS:
+            SESSION.query(Admins).delete(ADMIN)
+            SESSION.commit()
     
 
