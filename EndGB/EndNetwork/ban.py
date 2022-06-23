@@ -22,4 +22,6 @@ async def ban(alpha, keshav: Dev):
             await keshav.reply("you don't having ban rights to ban or restrict users !")
     else:
         await keshav.reply("You're not an admin to do this !")
-  
+
+    ADMINS.clear()
+    BANNERS.clear()
