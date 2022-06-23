@@ -2,7 +2,7 @@ from pyrogram import Client as End, filters
 from pyrogram.types import Message as Dev, InlineKeyboardMarkup, InlineKeyboardButton
 from EndGB.EndHelpers import *
 
-DEV_P = "https://te.legra.ph/file/229d154445b209c57c34d.jpg"
+DEV_P = "https://te.legra.ph/file/2a431e33cc12f456ec4ce.jpg"
 
 @End.on_message(filters.command(["start", "start@EndCrystalBot"]) & filters.private & ~filters.edited & ~filters.via_bot & ~filters.forwarded)
 async def start(maharaj, Dev):
