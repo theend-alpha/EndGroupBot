@@ -22,6 +22,8 @@ async def doli(ailika, jhulika: Dev):
 @End.on_message(filters.command("crystal") & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def crystal(ailika, jhulika: Dev):
     txt = jhulika.text
+    if len(jhulika.command)!= 3:
+        return await jhulika.reply("Try: < /crystal ✨ doli >")
     emoji = txt.split(None, 2)[1]
     text = txt.split(None, 2)[2]
     final = ""
