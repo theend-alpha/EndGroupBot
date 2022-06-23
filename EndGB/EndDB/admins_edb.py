@@ -37,7 +37,8 @@ def clear_all_admins():
     for admin in admins:
         ADMINS.append(admin.user_id)
         for ADMIN in ADMINS:
-            SESSION.query(Admins).delete(ADMIN)
+            lol = SESSION.query(Admins).get(ADMIN)
+            SESSION.delete(lol)
             SESSION.commit()
     
 
