@@ -5,8 +5,6 @@ from EndGB.EndAddons.emotes import *
 @End.on_message(filters.command("doli") & ~filters.edited & ~filters.via_bot)
 async def doli(ailika, jhulika: Dev):
         txt = jhulika.text
-        if jhulika.command == 1:
-            return await jhulika.reply("Try: < /doli crystal >")
         txt = txt.split(None, 1)[1]
         final = ""
         for a in txt:
@@ -17,4 +15,20 @@ async def doli(ailika, jhulika: Dev):
                 final += letter
             else:
                 final += a
+        await jhulika.reply(final)
+
+@End.on_message(filters.command("crystal") & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
+async def crystal(ailika, jhulika: Dev):
+    txt = jhulika.text
+    emoji = txt.split(None, 1)[1]
+    text = txt.split(None, 1)[2]
+    final = ""
+    for a in text:
+        a = a.lower()
+        a = str(a)
+        if a in END_TEXT:
+            letter = END_CJ[END_TEXT.index(a)].format(cj=emoji)
+            final += letter
+        else:
+            final += a
         await jhulika.reply(final)
