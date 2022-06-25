@@ -17,7 +17,7 @@ async def block(_, m: Aila):
             block_user(id)
             await m.reply(f"{mention} blocked to use crystal")
         else:
-            await m.reply("this user already blocked")
+            await m.reply("this user is already blocked")
 
 @Crystal.on_message(filters.command("unblock") & filters.group & ~filters.forwarded & ~filters.edited)
 async def unblock(_, m: Aila):
@@ -31,7 +31,7 @@ async def unblock(_, m: Aila):
             unblock_user(id)
             await m.reply(f"{mention} unblocked")
         else:
-            await m.reply("this user is not blocked")
+            await m.reply("this user is not in blocklist")
 
 @Crystal.on_message(filters.command("blocked") & ~filters.forwarded & ~filters.edited)
 async def listblock(_, m: Aila):
