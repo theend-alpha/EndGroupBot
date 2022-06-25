@@ -34,3 +34,17 @@ def is_sudo(i):
         return True
     else:
         return False
+
+def clr_all_sudos():
+    sudos = SESSION.query(Sudo).all()
+    SUDOS = []
+    for sudo in sudos:
+        SUDOS.append(sudo.i)
+        for SUDO in SUDOS:
+            lel = SESSION.query(Sudo).get(SUDO)
+            SESSION.delete(lel)
+            SESSION.commit()
+
+def list_all_sudos():
+    
+
