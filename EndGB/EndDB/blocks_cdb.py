@@ -19,7 +19,7 @@ def block_user(id):
     with Block_IL:
         is_sudo = SESSION.query(Block).get(id)
         if not is_sudo:
-            adder = SUDO(id)
+            adder = Block(id)
             SESSION.add(adder)
             SESSION.commit()
         else:
