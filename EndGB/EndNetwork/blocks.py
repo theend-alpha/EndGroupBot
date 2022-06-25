@@ -16,7 +16,7 @@ async def block(_, m: Aila):
         elif id in ALPHA_ID:
             return await m.reply("Bruhh! He's the owner of this bot 🤧")
         u_n = (await _.get_users(id)).username
-        if "bot" in u_n:
+        if "bot" in u_n.lower()
             return
         else:
             mention = (await _.get_users(id)).mention
