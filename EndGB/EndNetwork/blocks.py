@@ -1,6 +1,7 @@
 from pyrogram import Client as Crystal, filters
 from pyrogram.types import Message as Aila
-from EndGB.EndDB import *
+from EndGB.EndDB.blocks_cdb import *
+from EndGB.EndDB.sudos_cdb import *
 
 @Crystal.on_message(filters.command("block") & filters.group & ~filters.forwarded & ~filters.edited)
 async def block(_, m: Aila):
