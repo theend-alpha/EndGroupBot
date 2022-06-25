@@ -1,9 +1,12 @@
 from pyrogram import Client as End, filters
 from pyrogram.types import Message as Dev 
 from EndGB.EndAddons.emotes import *
+from EndGB.EndDB.blocks.cdb import is_blocked
 
 @End.on_message(filters.command("doli") & ~filters.edited & ~filters.via_bot)
 async def doli(ailika, jhulika: Dev):
+        if is_blocked(jhulika.from_user.id) is True:
+            return
         txt = jhulika.text
         if len(jhulika.command) != 2:
             return await jhulika.reply("Try: < /doli Crystal >")
@@ -21,6 +24,8 @@ async def doli(ailika, jhulika: Dev):
 
 @End.on_message(filters.command("crystal") & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def crystal(ailika, jhulika: Dev):
+    if is_blocked(jhulika.from_user.id) is True:
+        return
     txt = jhulika.text
     if len(jhulika.command)!= 3:
         return await jhulika.reply("Try: < /crystal ✨ doli >")
