@@ -2,10 +2,11 @@ from pyrogram import Client as Crystal, filters
 from pyrogram.types import Message as Aila
 from EndGB.EndDB.blocks_cdb import *
 from EndGB.EndDB.sudos_cdb import *
+from EndGB.EndNetwork.sudos import ALPHA_ID
 
 @Crystal.on_message(filters.command("block") & filters.group & ~filters.forwarded & ~filters.edited)
 async def block(_, m: Aila):
-    if is_sudo(m.from_user.id) is True:
+    if is_sudo(m.from_user.id) is True or m.from_user.id in ALPHA_ID:
         if len(m.command) == 2:
             id = int(m.text.split(None, 1)[1])
         else:
@@ -21,7 +22,7 @@ async def block(_, m: Aila):
 
 @Crystal.on_message(filters.command("unblock") & filters.group & ~filters.forwarded & ~filters.edited)
 async def unblock(_, m: Aila):
-    if is_sudo(m.from_user.id) is True:
+    if is_sudo(m.from_user.id) is True or m.from_user.id in ALPHA_ID:
         if len(m.command) == 2:
             id = int(m.text.split(None, 1)[1])
         else:
@@ -35,7 +36,7 @@ async def unblock(_, m: Aila):
 
 @Crystal.on_message(filters.command("blocked") & ~filters.forwarded & ~filters.edited)
 async def listblock(_, m: Aila):
-    if is_sudo(m.from_user.id) is True:
+    if is_sudo(m.from_user.id) is True or m.from_user.id in ALPHA_ID:
         blocked = list_all_blocked()
         msg = """"""
         for block in blocked:
