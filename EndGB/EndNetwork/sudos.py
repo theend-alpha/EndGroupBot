@@ -16,8 +16,6 @@ async def addc(deadbody, Alpha: Aila):
         u_n = (await deadbody.get_users(id)).username
     if "bot" in u_n:
         return
-    elif u_n is None:
-        return
     if u_n:
         lel = "@" + u_n
     else:
