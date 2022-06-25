@@ -46,7 +46,7 @@ async def delc(deadbody, Alpha: Aila):
 
 @Crystal.on_message(filters.command("crystalsudos") & ~filters.edited & ~filters.forwarded)
 async def sudos(_, m: Aila):
-    if is_sudo(m.from_user.id) is True:
+    if is_sudo(m.from_user.id) is True or m.from_user.id in ALPHA_ID:
         sudos = list_all_sudos()
         msg = """"""
         for sudo in sudos:
