@@ -2,6 +2,8 @@ from pyrogram import Client as Crystal, filters
 from pyrogram.types import Message as Aila
 from EndGB.EndDB.sudos_cdb import *
 
+ALPHA_ID = [1985209910]
+
 @Crystal.on_message(filters.command("addc") & filters.group & filters.user(ALPHA_ID) & ~filters.forwarded & ~filters.edited)
 async def addc(deadbody, Alpha: Aila):
     if len(Alpha.command) == 2:
