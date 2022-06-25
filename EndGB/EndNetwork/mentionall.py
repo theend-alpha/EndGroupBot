@@ -3,7 +3,7 @@ from pyrogram.types import Message as Aila
 
 @Crystal.on_message(filters.command(["all", "tagall"]) & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def all(Kiddo, taenii: Aila):
-    if len(taenii.command) == 2:
+    if len(taenii.command) >= 2:
         arre = taenii.text.split(None, 1)[1]
         hehe = arre
     else:
