@@ -2,8 +2,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
 import os
-from EndGB.EndDB.sudos_cdb import *
-from EndGB.EndDB.blocks_cdb import *
 
 DATABASE_URL = os.environ.get('DATABASE_URL', None)
 
