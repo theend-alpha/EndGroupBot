@@ -1,5 +1,6 @@
 from . import SESSION, BASE
 from sqlalchemy import Column, Integer
+from sqlalchemy.sql.sqltypes import BigInteger
 
 class SUDO(BASE):
     __tablename__ = "sudousers"
