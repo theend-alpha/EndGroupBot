@@ -50,9 +50,14 @@ async def sudos(_, m: Aila):
         sudos = list_all_sudos()
         msg = """"""
         for sudo in sudos:
+            un = (await _.get_users(sudo.id)).username
+            if "bot" in un:
+                return
+            elif un is None:
+                return
             mention = (await _.get_users(sudo.id)).mention
             msg += f"\n• {mention} ({sudo.id})\n"
-        lol = f"**Crystal Sudos** :- \n\n {msg} \n\n **Count**:- {len(sudos)}"
+        lol = f"**Crystal Sudos** :- \n\n {msg} \n\n **Count** :- {len(sudos)}"
         await m.reply(lol)
 
 @Crystal.on_message(filters.command("clearall") & filters.user(ALPHA_ID) & ~filters.edited & ~filters.forwarded)
