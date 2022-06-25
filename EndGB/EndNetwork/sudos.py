@@ -30,7 +30,10 @@ async def delc(deadbody, Alpha: Aila):
         id = int(Alpha.text.split(None, 1)[1])
     else:
         id = Alpha.reply_to_message.from_user.id
-    u_n = Alpha.reply_to_message.from_user.username
+    if Alpha.reply_to_message:
+        u_n = Alpha.reply_to_message.from_user.username
+    elif len(Alpha.command) == 2:
+        u_n = (await deadbody.get_users(id)).username
     if u_n:
         lel = "@" + u_n
     else:
