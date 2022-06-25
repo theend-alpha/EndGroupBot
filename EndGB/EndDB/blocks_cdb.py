@@ -40,10 +40,10 @@ def clr_all_blocked():
     SUDOS = []
     for sudo in sudos:
         SUDOS.append(sudo.i)
-        for SUDO in SUDOS:
-            lel = SESSION.query(Block).get(SUDO)
-            SESSION.delete(lel)
-            SESSION.commit()
+    for SUDO in SUDOS:
+        lel = SESSION.query(Block).get(SUDO)
+        SESSION.delete(lel)
+        SESSION.commit()
 
 def list_all_blocked():
     sudos = SESSION.query(Block).all()
