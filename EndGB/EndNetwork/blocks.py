@@ -10,6 +10,8 @@ async def block(_, m: Aila):
             id = int(m.text.split(None, 1)[1])
         else:
             id = m.reply_to_message.from_user.id
+        if is_sudo(id) is True:
+            return await m.reply("this user is a sudo, you can't block them")
         mention = (await _.get_users(id)).mention
         if is_blocked(id) is False:
             block_user(id)
