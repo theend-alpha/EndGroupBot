@@ -1,7 +1,7 @@
 from pyrogram import Client as End, filters
 from pyrogram.types import Message as Dev 
 from EndGB.EndAddons.emotes import *
-from EndGB.EndDB.blocks.cdb import is_blocked
+from EndGB.EndDB.blocks_cdb import is_blocked
 
 @End.on_message(filters.command("doli") & ~filters.edited & ~filters.via_bot)
 async def doli(ailika, jhulika: Dev):
