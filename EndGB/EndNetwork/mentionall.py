@@ -15,7 +15,8 @@ async def all(Kiddo, taenii: Aila):
             return
         elif "bot" in mention.lower():
             return
-        mentions += f"\n@{mention}"
+        else:
+            mentions += f"\n@{mention}"
     lel = f"{hehe}\n{mentions}"
     await Kiddo.send_message(taenii.chat.id, lel) 
     
