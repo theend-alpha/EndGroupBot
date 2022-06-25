@@ -6,8 +6,8 @@ class Sudo(BASE):
 
     user_id = Column(Integer, primary_key=True)
 
-    def __init__(self, user_id):
-        self.user_id = user.id
+    def __init__(self, i):
+        self.i = i
 
 Sudo.__table__.create(checkfirst=True)
 
