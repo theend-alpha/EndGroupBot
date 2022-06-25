@@ -6,30 +6,30 @@ class Sudo(BASE):
 
     user_id = Column(Integer, primary_key=True)
 
-    def __init__(self, i):
-        self.i = i
+    def __init__(self, id):
+        self.id = id
 
 Sudo.__table__.create(checkfirst=True)
 
-def add_sudo(i):
-    is_sudo = SESSION.query(Sudo).get(i)
+def add_sudo(id):
+    is_sudo = SESSION.query(Sudo).get(id)
     if not is_sudo:
-        adder = Sudo(i)
+        adder = Sudo(id)
         SESSION.add(adder)
         SESSION.commit()
     else:
         SESSION.close()
 
-def del_sudo(i):
-    is_sudo = SESSION.query(Sudo).get(i)
+def del_sudo(id):
+    is_sudo = SESSION.query(Sudo).get(id)
     if is_sudo:
         SESSION.delete(is_sudo)
         SESSION.commit()
     else:
         SESSION.close()
 
-def is_sudo(i):
-    sudo = SESSION.query(Sudo).get(i)
+def is_sudo(id):
+    sudo = SESSION.query(Sudo).get(id)
     if sudo:
         return True
     else:
@@ -39,7 +39,7 @@ def clr_all_sudos():
     sudos = SESSION.query(Sudo).all()
     SUDOS = []
     for sudo in sudos:
-        SUDOS.append(sudo.i)
+        SUDOS.append(sudo.id)
     for SUDO in SUDOS:
         lel = SESSION.query(Sudo).get(SUDO)
         SESSION.delete(lel)
