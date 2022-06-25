@@ -46,5 +46,9 @@ def clr_all_sudos():
             SESSION.commit()
 
 def list_all_sudos():
-    
+    sudos = SESSION.query(Sudo).all()
+    try:
+        return sudos
+    finally:
+        SESSION.close()
 
