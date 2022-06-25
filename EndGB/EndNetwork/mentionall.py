@@ -10,8 +10,8 @@ async def all(Kiddo, taenii: Aila):
         hehe = "Hello everyone"
     mentions = """"""
     async for user in Kiddo.iter_chat_members(taenii.chat.id):
-        mention = user.user.mention
-        mentions += f"\n{mention}"
+        mention = user.user.username
+        mentions += f"\n@{mention}"
     lel = f"{hehe}\n{mentions}"
     await Kiddo.send_message(taenii.chat.id, lel) 
     
