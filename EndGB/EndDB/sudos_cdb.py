@@ -40,10 +40,10 @@ def clr_all_sudos():
     SUDOS = []
     for sudo in sudos:
         SUDOS.append(sudo.i)
-        for SUDO in SUDOS:
-            lel = SESSION.query(Sudo).get(SUDO)
-            SESSION.delete(lel)
-            SESSION.commit()
+    for SUDO in SUDOS:
+        lel = SESSION.query(Sudo).get(SUDO)
+        SESSION.delete(lel)
+        SESSION.commit()
 
 def list_all_sudos():
     sudos = SESSION.query(Sudo).all()
