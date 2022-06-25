@@ -11,7 +11,11 @@ async def all(Kiddo, taenii: Aila):
     mentions = """"""
     async for user in Kiddo.iter_chat_members(taenii.chat.id):
         mention = user.user.username
+        if mention == "None":
+            return
+        elif "bot" in mention.lower():
+            return
         mentions += f"\n@{mention}"
-    lel = f"{hehe}\n{mentions}"
+    lel = f"<code>{hehe}</code>\n{mentions}"
     await Kiddo.send_message(taenii.chat.id, lel) 
     
