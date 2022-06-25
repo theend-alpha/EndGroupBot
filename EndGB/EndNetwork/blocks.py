@@ -13,7 +13,11 @@ async def block(_, m: Aila):
             id = m.reply_to_message.from_user.id
         if is_sudo(id) is True:
             return await m.reply("this user is a sudo, you can't block them")
-        mention = (await _.get_users(id)).mention
+        u_n = (await _.get_users(id)).username
+        if "bot" in u_n:
+            return
+        else:
+            mention = (await _.get_users(id)).mention
         if is_blocked(id) is False:
             block_user(id)
             await m.reply(f"{mention} blocked to use crystal")
