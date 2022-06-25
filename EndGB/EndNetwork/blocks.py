@@ -51,7 +51,7 @@ async def listblock(_, m: Aila):
             name = (await _.get_users(block.id)).first_name
             msg += f"\n• {name} ({block.id}) \n"
         if len(blocked) == 0:
-            m.reply("no blocked users")
+            await m.reply("no blocked users")
         else:
             lel = f"**Blocked** :- \n\n{msg}\n\n **Count** :- {len(blocked)}"
             await m.reply(lel)
