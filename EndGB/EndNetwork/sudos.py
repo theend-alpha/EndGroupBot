@@ -12,7 +12,7 @@ async def addc(deadbody, Alpha: Aila):
         id = Alpha.reply_to_message.from_user.id
     u_n = Alpha.reply_to_message.from_user.username
     if u_n:
-        lel = u_n
+        lel = "@" + u_n
     else:
         lel = Alpha.reply_to_message.from_user.mention
     if is_sudo(id) is False:
@@ -29,7 +29,7 @@ async def delc(deadbody, Alpha: Aila):
         id = Alpha.reply_to_message.from_user.id
     u_n = Alpha.reply_to_message.from_user.username
     if u_n:
-        lel = u_n
+        lel = "@" + u_n
     else:
         lel = Alpha.reply_to_message.from_user.mention
     if is_sudo(id) is True:
