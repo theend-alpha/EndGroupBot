@@ -12,7 +12,7 @@ async def all(Kiddo, taenii: Aila):
     LOL = []
     async for user in Kiddo.iter_chat_members(taenii.chat.id):
         mention = user.user.username
-        if mention != "None":
+        if mention != None:
             if "bot" in mention.lower():
                 return
             else:
