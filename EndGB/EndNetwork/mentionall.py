@@ -8,9 +8,8 @@ async def all(Kiddo, taenii: Aila):
         hehe = arre
     else:
         hehe = "Hello everyone"
-    users = Kiddo.iter_chat_members(taenii.chat.id)
     mentions = """"""
-    for user in users:
+    async for user in Kiddo.iter_chat_members(taenii.chat.id):
         mention = user.user.mention
         mentions += f"\n{mention}"
     lel = f"{hehe}\n{mentions}"
