@@ -44,8 +44,8 @@ async def sudos(_, m: Aila):
         sudos = list_all_sudos()
         msg = """"""
         for sudo in sudos:
-            mention = (await _.get_users(sudo.i)).mention
-            msg += f"\n• {mention} ({sudo.i})\n"
+            mention = (await _.get_users(sudo.id)).mention
+            msg += f"\n• {mention} ({sudo.id})\n"
         lol = f"**Crystal Sudos** :- \n\n {msg} \n\n **Count**:- {len(sudos)}"
         await m.reply(lol)
 
