@@ -4,32 +4,32 @@ from sqlalchemy import Column, Integer
 class Block(BASE):
     __tablename__ = "block"
 
-    i = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
 
-    def __init__(self, i):
-        self.i = i
+    def __init__(self, id):
+        self.id = id
 
 Block.__table__.create(checkfirst=True)
 
-def block_user(i):
-    is_sudo = SESSION.query(Block).get(i)
+def block_user(id):
+    is_sudo = SESSION.query(Block).get(id)
     if not is_sudo:
-        adder = Block(i)
+        adder = Block(id)
         SESSION.add(adder)
         SESSION.commit()
     else:
         SESSION.close()
 
-def unblock_user(i):
-    is_sudo = SESSION.query(Block).get(i)
+def unblock_user(id):
+    is_sudo = SESSION.query(Block).get(id)
     if is_sudo:
         SESSION.delete(is_sudo)
         SESSION.commit()
     else:
         SESSION.close()
 
-def is_blocked(i):
-    sudo = SESSION.query(Block).get(i)
+def is_blocked(id):
+    sudo = SESSION.query(Block).get(id)
     if sudo:
         return True
     else:
@@ -39,7 +39,7 @@ def clr_all_blocked():
     sudos = SESSION.query(Block).all()
     SUDOS = []
     for sudo in sudos:
-        SUDOS.append(sudo.i)
+        SUDOS.append(sudo.id)
     for SUDO in SUDOS:
         lel = SESSION.query(Block).get(SUDO)
         SESSION.delete(lel)
