@@ -9,16 +9,9 @@ async def all(Kiddo, taenii: Aila):
     else:
         hehe = "Hello everyone"
     mentions = """"""
-    LOL = []
     async for user in Kiddo.iter_chat_members(taenii.chat.id):
         mention = user.user.username
-        if not mention is None:
-            if "bot" in mention.lower():
-                return
-            else:
-                LOL.append(mention)
-        for tara in LOL:
-            mentions += f"\n@{tara}"           
-    lel = f"{hehe}\n{mentions}"
+        mentions += f"\n@{mention}"  
+    lel = f"**{hehe}**\n{mentions}"
     await Kiddo.send_message(taenii.chat.id, lel) 
     
