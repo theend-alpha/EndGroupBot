@@ -14,9 +14,9 @@ async def addc(deadbody, Alpha: Aila):
         u_n = Alpha.reply_to_message.from_user.username
     elif len(Alpha.command) == 2:
         u_n = (await deadbody.get_users(id)).username
-    if "bot" in u_n:
-        return
     if u_n:
+        if "bot" in u_n:
+            return
         lel = "@" + u_n
     else:
         lel = Alpha.reply_to_message.from_user.mention
