@@ -13,6 +13,8 @@ async def block(_, m: Aila):
             id = m.reply_to_message.from_user.id
         if is_sudo(id) is True:
             return await m.reply("this user is a sudo, you can't block them")
+        elif id in ALPHA_ID:
+            return await m.reply("Bruhh! He's the owner of this bot 🤧")
         u_n = (await _.get_users(id)).username
         if "bot" in u_n:
             return
@@ -31,6 +33,8 @@ async def unblock(_, m: Aila):
             id = int(m.text.split(None, 1)[1])
         else:
             id = m.reply_to_message.from_user.id
+        if id in ALPHA_ID:
+            return await m.reply("lol 🤧😂")
         mention = (await _.get_users(id)).mention
         if is_blocked(id) is True:
             unblock_user(id)
