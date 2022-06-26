@@ -9,4 +9,4 @@ async def id(_, m: Aila):
         id = m.reply_to_message.from_user.id
     else:
         await m.reply("reply to a user")
-    await m.reply(f"{f_n} has an id of <i>{id}</i>")
+    await m.reply(f"{f_n} has an id of <code>{id}</code>")
