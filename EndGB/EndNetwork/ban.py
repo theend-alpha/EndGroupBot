@@ -11,7 +11,7 @@ async def ban(_, m: Aila):
         if hehe.isnumeric():
             f_id = hehe
         else:
-            m.reply("Try: /ban < user_id >")
+            await m.reply("Try: /ban < user_id >")
     else:
         f_id = m.reply_to_message.from_user.id
     if not f_id and m.reply_to_message:
@@ -53,7 +53,7 @@ async def unban(_, m: Aila):
         if hehe.isnumeric():
             f_id = hehe
         else:
-            m.reply("Try: /unban < user_id >")
+            await m.reply("Try: /unban < user_id >")
     else:
         f_id = m.reply_to_message.from_user.id
     if not f_id and m.reply_to_message:
