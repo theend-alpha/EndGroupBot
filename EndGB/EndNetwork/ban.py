@@ -56,6 +56,7 @@ async def ban(_, m: Aila):
 async def unban(_, m: Aila):
     if not m.reply_to_message and len(m.command) == 1:
         return await m.reply("Either reply or use /unban < id > to unban")
+    me = await _.get_chat_member(m.chat.id, 5507162172)
     if me.can_restrict_members is False:
         return await m.reply("I'm not having sufficient rights to unban users 🤧")
     i_id = m.from_user.id
