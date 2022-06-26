@@ -7,6 +7,6 @@ async def id(_, m: Aila):
     if m.reply_to_message:
         f_n = m.reply_to_message.from_user.first_name
         id = m.reply_to_message.from_user.id
-        await m.reply(f"{f_n} has an id of <code>{id}</code>")
+        await m.reply(f"{f_n} has an ID of <code>{id}</code>.")
     else:
         await m.reply("reply to a user")
