@@ -42,7 +42,7 @@ async def ban(_, m: Aila):
                 i_m = (await _.get_users(i_id)).mention
                 f_m = (await _.get_users(f_id)).mention
                 try:
-                    await m.chat.ban_member(f_id)
+                    await _.kick_chat_member(m.chat.id, f_id)
                 except:
                     pass
                 await m.reply(f"{f_m} is banned! And was done by {i_m}")
