@@ -1,5 +1,5 @@
 from pyrogram import Client as Crystal, filters
-from pyrogram.types import Message as Aila
+from pyrogram.types import Message as Aila, ChatPermissions
 from EndGB.EndNetwork.sudos import ALPHA_ID
 from EndGB.EndDB.sudos_cdb import is_sudo
 
