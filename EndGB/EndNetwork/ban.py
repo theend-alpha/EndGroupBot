@@ -5,8 +5,11 @@ from EndGB.EndDB.sudos_cdb import is_sudo
 
 @Crystal.on_message(filters.command("ban") & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def ban(_, m: Aila):
+    if not m.reply_to_message and len(m.command) == 1:
+        await m.reply("Either reply or use /ban < id > to ban")
     me = await _.get_chat_member(m.chat.id, 5507162172)
     if me.can_restrict_members is False:
+
         return await m.reply("I'm not having sufficient rights to ban users 🤧")
     i_id = m.from_user.id
     if len(m.command) == 2:
