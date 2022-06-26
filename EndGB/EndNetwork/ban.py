@@ -54,6 +54,8 @@ async def ban(_, m: Aila):
 
 @Crystal.on_message(filters.command("unban") & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def unban(_, m: Aila):
+    if not m.reply_to_message and len(m.command) == 1:
+        await m.reply("Either reply or use /unban < id > to unban")
     if me.can_restrict_members is False:
         return await m.reply("I'm not having sufficient rights to unban users 🤧")
     i_id = m.from_user.id
