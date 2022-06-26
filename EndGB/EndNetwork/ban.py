@@ -80,7 +80,7 @@ async def unban(_, m: Aila):
             if not target:
                 f_m = (await _.get_users(f_id)).mention
                 f_un = (await _.get_users(f_id)).username
-                m.chat.unban_member(f_id)
+                await _.unban_chat_member(m.chat.id, f_id)
                 await m.reply(("{} is unbanned!, if banned in {}").format("@" + f_un if f_un else f_m, m.chat.title))
             else:
                 await m.reply("user isn't banned ! 🤧")
