@@ -13,9 +13,10 @@ async def ban(_, m: Aila):
         else:
             await m.reply("Try: /ban < user_id >")
     else:
-        f_id = m.reply_to_message.from_user.id
-    if not f_id and m.reply_to_message:
-        return await m.reply("replied user is either anonymous admin or a channel")
+        try:
+            f_id = m.reply_to_message.from_user.id
+        except:
+            await m.reply("replied user is either channel or an anonymous admin")
     try:
         member = await _.get_chat_member(m.chat.id, i_id)
     except:
@@ -55,9 +56,10 @@ async def unban(_, m: Aila):
         else:
             await m.reply("Try: /unban < user_id >")
     else:
-        f_id = m.reply_to_message.from_user.id
-    if not f_id and m.reply_to_message:
-        return await m.reply("replied user is either anonymous admin or a channel")
+        try:
+            f_id = m.reply_to_message.from_user.id
+        except:
+            await m.reply("replied user is either channel or an anonymous admin")
     try:
         member = await _.get_chat_member(m.chat.id, i_id)
     except:
