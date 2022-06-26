@@ -1,6 +1,7 @@
 from pyrogram import Client as Crystal, filters
 from pyrogram.types import Message as Aila
 from EndGB.EndNetwork.sudos import ALPHA_ID
+from EndGB.EndDB.sudos_cdb import is_sudo
 
 @Crystal.on_message(filters.command("ban") & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
 async def ban(_, m: Aila):
