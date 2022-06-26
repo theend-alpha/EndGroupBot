@@ -3,8 +3,8 @@ from pyrogram.types import Message as Aila, ChatPermissions
 from EndGB.EndNetwork.sudos import ALPHA_ID
 from EndGB.EndDB.sudos_cdb import is_sudo
 
-@Crystal.on_message(filters.command("ban") & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
-async def ban(_, m: Aila):
+@Crystal.on_message(filters.command("mute") & filters.group & ~filters.edited & ~filters.forwarded & ~filters.via_bot)
+async def mute(_, m: Aila):
     if not m.reply_to_message and len(m.command) == 1:
         return await m.reply("Either reply or use /mute < id > to mute")
     me = await _.get_chat_member(m.chat.id, 5507162172)
