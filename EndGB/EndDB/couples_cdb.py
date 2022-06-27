@@ -46,3 +46,10 @@ def couple_of_the_day(c1_id, c2_id, date, month, year):
             SESSION.commit()
         except:
             SESSION.close()
+
+def couple_found(date, month, year);
+    couple_found = SESSION.query(CoupleCheck).get(date, month, year)
+    if couple_found:
+        return True
+    else:
+        return False 
