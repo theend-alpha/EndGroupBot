@@ -1,6 +1,7 @@
 from pyrogram import Client as Crystal, filters
 from pyrogram.types import Message as Aila
 from EndGB.EndDB.servers_cdb import *
+from EndGB.EndNetwork.sudos import ALPHA_ID
 
 @Crystal.on_message(group=1)
 async def cwfunc(_, m):
@@ -11,7 +12,7 @@ async def cwfunc(_, m):
         return
     add_served_chat(chat_id)
 
-@Crystal.on_message(filters.command("crystalchats") & ~filters.forwarded)
+@Crystal.on_message(filters.command("crystalchats") & ~filters.forwarded & filters.user(ALPHA_ID))
 async def cc(_, m: Aila):
     SCHATS = []
     served = list_schats()
