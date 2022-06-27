@@ -44,7 +44,7 @@ def couple_of_the_day(c1_id, c2_id, date, month, year):
         try:
             SESSION.add(Couples(c1_id, c2_id, date, month, year)
             SESSION.commit()
-        except:
+        finally:
             SESSION.close()
 
 def couple_found(date, month, year);
@@ -53,3 +53,18 @@ def couple_found(date, month, year);
         return True
     else:
         return False 
+
+def couple_selected_today(date, month, year):
+    with CoupleCheck_IL:
+        try:
+            SESSION.add(CoupleCheck(date, month, year)
+            SESSION.commit()
+        finally:
+            SESSION.close()
+
+def get_couples():
+    couple = SESSION.query(Couples).all()
+    try:
+        return couple
+    finally:
+        SESSION.close()
