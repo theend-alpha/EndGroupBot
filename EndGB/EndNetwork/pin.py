@@ -5,6 +5,9 @@ from EndGB.EndNetwork.sudos import ALPHA_ID
 
 @Crystal.on_message(filters.command(["pin", "unpin"]) & filters.group & ~filters.via_bot & ~filters.edited & ~filters.forwarded)
 async def pin(_, m: Aila):
+    I = await _.get_chat_member(m.chat.id, 5507162172)
+    if I.can_pin_messages is False:
+        return await m.reply("I don't have sufficient rights to pin 🤧")
     if m.from_user:
         if m.reply_to_message:
             member = await _.get_chat_member(m.chat.id, m.from_user.id)
