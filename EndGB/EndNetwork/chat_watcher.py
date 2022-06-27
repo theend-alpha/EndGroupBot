@@ -14,7 +14,7 @@ async def cc(_, m: Aila):
     SCHATS = []
     served = list_schats()
     for serve in served:
-        SCHATS.append(serve.id)
+        SCHATS.append(serve.chat_id)
     msg = ""
     for SCHAT in SCHATS:
         schat = str(SCHAT)
