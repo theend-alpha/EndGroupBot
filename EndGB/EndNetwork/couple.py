@@ -40,6 +40,8 @@ New couple of the day may be chosen at 5:30 am"
                     pass
                 else:
                     ALL.append(user.user.id)
+            if len(ALL) < 2:
+                return await m.reply("no enough users to ship 🤧")
             c1_id = random.choice(ALL)
             c2_id = random.choice(ALL)
             while c1_id == c2_id:
