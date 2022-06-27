@@ -9,4 +9,4 @@ async def id(_, m: Aila):
         id = m.reply_to_message.from_user.id
         await m.reply(f"{f_n} has an ID of <code>{id}</code>.")
     else:
-        await m.reply("reply to a user")
+        await m.reply(f"user {m.from_user.first_name} has an ID of <code>{m.from_user.id}</code>, chat has an ID <code>{m.chat.id}</code>.")
