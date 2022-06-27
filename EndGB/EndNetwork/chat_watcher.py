@@ -11,4 +11,13 @@ async def cwfunc(_, m):
 
 @Crystal.on_message(filters.command("crystalchats") & ~filters.forwarded)
 async def cc(_, m: Aila):
-    
+    SCHATS = []
+    served = list_schats()
+    for serve in served:
+        SCHATS.append(serve.id)
+    msg = ""
+    for SCHAT in SCHATS:
+        schat = str(SCHAT)
+        msg += f"\n{schat}"
+    await m.reply(f"**Served chats** :-\n{msg}\n\n**Count** :- {len(SCHATS)}")
+
