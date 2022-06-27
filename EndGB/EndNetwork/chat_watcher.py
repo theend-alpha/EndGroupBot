@@ -4,6 +4,8 @@ from EndGB.EndDB.servers_cdb import *
 
 @Crystal.on_message(group=1)
 async def cwfunc(_, m):
+    if m.chat.type == "private":
+        return 
     chat_id = m.chat.id
     if is_served_chat(chat_id):
         return
