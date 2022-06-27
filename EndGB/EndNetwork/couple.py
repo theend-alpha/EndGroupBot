@@ -11,7 +11,7 @@ date = int(y_m_d[8:])
 
 @Crystal.on_message(filters.command(["couple", "couples", "shipping", "shipping@EndCrystalBot"]) & ~filters.edited & ~filters.via_bot)
 async def couple(_, m: Aila):
-    if m.chat.type == "private"
+    if m.chat.type == "private":
         return await m.reply("try this command in groups")
     if m.from_user:
         if couple_found(date, month, year):
