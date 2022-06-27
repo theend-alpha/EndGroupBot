@@ -56,3 +56,18 @@ def is_private_user(user_id):
         return True
     else:
         return False
+
+def list_schats():
+    schats = SESSION.query(Served).all()
+    try:
+        return schats
+    finally:
+        SESSION.close()
+
+def get_p_users():
+    p_users = SESSION.query(Users).all()
+    try:
+        return p_users
+    finally:
+        SESSION.close()
+        
