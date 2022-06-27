@@ -42,7 +42,7 @@ CoupleCheck_IL = threading.RLock()
 def couple_of_the_day(c1_id, c2_id, date, month, year):
     with Couples_IL:
         try:
-            SESSION.add(Couples(c1_id, c2_id, date, month, year)
+            SESSION.add(Couples(c1_id, c2_id, date, month, year))
             SESSION.commit()
         finally:
             SESSION.close()
@@ -57,7 +57,7 @@ def couple_found(date, month, year):
 def couple_selected_today(date, month, year):
     with CoupleCheck_IL:
         try:
-            SESSION.add(CoupleCheck(date, month, year)
+            SESSION.add(CoupleCheck(date, month, year))
             SESSION.commit()
         finally:
             SESSION.close()
