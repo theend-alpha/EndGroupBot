@@ -11,3 +11,10 @@ date = y_m_d[8:]
 
 @Crystal.on_message(filters.command(["couple", "couples", "shipping", "shipping@EndCrystalBot"]) & ~filters.edited & ~filters.via_bot)
 async def couple(_, m: Aila):
+    if m.from_user:
+        if couple_found(date, month, year):
+            COUPLE = []
+            couples = get_couples()
+            for couple in couples:
+                COUPLE.append(couple.c1_id)
+                COUPLE.append(couple.c2_id)
