@@ -77,6 +77,9 @@ async def unban(_, m: Aila):
         pass
     if m.from_user:
         if member.can_restrict_members or is_sudo(i_id) or i_id in ALPHA_ID:
+            lel = await _.get_chat_member(m.chat.id, f_id)
+            if lel.status != "banned":
+                return await m.reply("user isn't banned")
             f_m = (await _.get_users(f_id)).mention
             f_un = (await _.get_users(f_id)).username
             await _.unban_chat_member(m.chat.id, f_id)
