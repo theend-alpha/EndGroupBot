@@ -48,11 +48,11 @@ New couple of the day may be chosen at 5:30 am"""
                 c2_id = random.choice(ALL)
             c1_m = (await _.get_users(c1_id)).mention
             c2_m = (await _.get_users(c2_id)).mention
-            c_s_m = f"Couple of the day has been chosen:
+            c_s_m = f"""Couple of the day has been chosen:
 {c1_m} + {c2_m} = ❤️
 [{c1_id}, {c2_id}]
 
-New couple of the day may be chosen at 5:30 am"
+New couple of the day may be chosen at 5:30 am"""
 
             couple_of_the_day(c1_id, c2_id, date, month, year)
             couple_selected_today(date, month, year)
