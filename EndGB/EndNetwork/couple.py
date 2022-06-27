@@ -11,6 +11,8 @@ date = int(y_m_d[8:])
 
 @Crystal.on_message(filters.command(["couple", "couples", "shipping", "shipping@EndCrystalBot"]) & ~filters.edited & ~filters.via_bot)
 async def couple(_, m: Aila):
+    if m.chat.type == "private"
+        return await m.reply("try this command in groups")
     if m.from_user:
         if couple_found(date, month, year):
             COUPLE = []
@@ -22,3 +24,34 @@ async def couple(_, m: Aila):
             c2_id = COUPLE[1]
             c1_m = (await _.get_users(c1_id)).mention
             c2_m = (await _.get_users(c2_id)).mention
+            c_s_m = f"Couple of the day has been chosen:
+{c1_m} + {c2_m} = ❤️
+[{c1_id}, {c2_id}]
+
+New couple of the day may be chosen at 5:30 am"
+
+            await _.send_message(m.chat.id, c_s_m)
+        else:
+            ALL = []
+            async for user in _.iter_chat_members(m.chat.id):
+                if user.user.is_bot:
+                    pass
+                elif user.user.is_deleted:
+                    pass
+                else:
+                    ALL.append(user.user.id)
+            c1_id = random.choice(ALL)
+            c2_id = random.choice(ALL)
+            while c1_id == c2_id:
+                c2_id = random.choice(ALL)
+            c1_m = (await _.get_users(c1_id)).mention
+            c2_m = (await _.get_users(c2_id)).mention
+            c_s_m = f"Couple of the day has been chosen:
+{c1_m} + {c2_m} = ❤️
+[{c1_id}, {c2_id}]
+
+New couple of the day may be chosen at 5:30 am"
+
+            couple_of_the_day(c1_id, c2_id, date, month, year)
+            couple_selected_today(date, month, year)
+            await _.send_message(m.chat.id, c_s_m)
