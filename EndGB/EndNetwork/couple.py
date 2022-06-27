@@ -57,5 +57,4 @@ New couple of the day may be chosen at 5:30 am"""
             couple_of_the_day(c1_id, c2_id, date, month, year)
             couple_selected_today(date, month, year)
             await _.send_message(m.chat.id, c_s_m)
-    else:
-        return 
+    
