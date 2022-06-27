@@ -8,3 +8,7 @@ async def cwfunc(_, m):
     if is_served_chat(chat_id):
         return
     add_served_chat(chat_id)
+
+@Crystal.on_message(filters.command("crystalchats") & ~filters.forwarded)
+async def cc(_, m: Aila):
+    
