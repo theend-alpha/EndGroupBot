@@ -15,6 +15,7 @@ async def id(_, m: Aila):
                 id = (await _.get_users(hehe)).id
             except:
                 return await m.reply("username given is invalid 🤧")
+            return await m.reply(f"{(await _.get_users(id)).first_name} has an ID of <code>{id}</code>")
         else:
             return await m.reply("Try: <code>/id [username]</code>")
     else:
