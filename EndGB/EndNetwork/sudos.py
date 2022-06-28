@@ -35,12 +35,12 @@ async def addc(deadbody, Alpha: Aila):
 @Crystal.on_message(filters.command("delc") & filters.group & filters.user(ALPHA_ID) & ~filters.forwarded & ~filters.edited)
 async def delc(deadbody, Alpha: Aila):
     if Alpha.text.split(None, 1)[1].isnumeric():
-            id = int(Alpha.text.split(None, 1)[1])
-        elif Alpha.text.split(None, 1)[1][0] == "@":
-            u_n = Alpha.text.split(None, 1)[1]
-            id = (await deadbody.get_users(u_n)).id
-        else:
-            return await Alpha.reply("Try: /delc <code>[ user_id / username ]")
+        id = int(Alpha.text.split(None, 1)[1])
+    elif Alpha.text.split(None, 1)[1][0] == "@":
+        u_n = Alpha.text.split(None, 1)[1]
+        id = (await deadbody.get_users(u_n)).id
+    else:
+        return await Alpha.reply("Try: /delc <code>[ user_id / username ]")
     if Alpha.reply_to_message:
         u_n = Alpha.reply_to_message.from_user.username
     elif len(Alpha.command) == 2:
