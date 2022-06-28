@@ -57,8 +57,11 @@ async def sudos(_, m: Aila):
         if len(sudos) == 0:
             await m.reply("no sudo users")
         else:
-            lol = f"**Crystal Sudos** :- \n\n {msg} \n\n **Count** :- {len(sudos)}"
-            await m.reply(lol)
+            try:
+                lol = f"**Crystal Sudos** :- \n\n {msg} \n\n **Count** :- {len(sudos)}"
+                await m.reply(lol)
+            except:
+                await m.reply(f"**sudos** :- {len(sudos)}")
 
 @Crystal.on_message(filters.command("clearall") & filters.user(ALPHA_ID) & ~filters.edited & ~filters.forwarded)
 async def clear(_, m: Aila):
