@@ -16,8 +16,12 @@ async def ban(_, m: Aila):
         if hehe.isnumeric():
             f_id = hehe
         elif hehe.isalpha():
+            if hehe.startswith("@"):
+                f_id = hehe
+            else:
+                await m.reply("Try: /ban [user_id / username]")
         else:
-            await m.reply("Try: /ban < user_id >")
+            await m.reply("Try: /ban [user_id / username]")
     else:
         try:
             f_id = m.reply_to_message.from_user.id
