@@ -46,11 +46,11 @@ async def ban(_, m: Aila):
                 f_m = (await _.get_users(f_id)).mention
                 if not f_m:
                     return await m.reply("user not found 🤧")
+                await m.reply(f"{f_m} is banned! And was done by {i_m}")
                 try:
                     await _.kick_chat_member(m.chat.id, f_id)
                 except:
                     pass
-                await m.reply(f"{f_m} is banned! And was done by {i_m}")
         else:
             await m.reply(f"you need to be an admin in {m.chat.title} with ban rights to do this 🤧")
     else:
@@ -69,8 +69,13 @@ async def unban(_, m: Aila):
         hehe = m.text.split(None, 1)[1]
         if hehe.isnumeric():
             f_id = hehe
+        elif hehe[0] == "@":
+            try:
+                f_id = (await _.get_users(hehe)).id
+            except:
+                return await m.reply("username provided is invalid 🤧")
         else:
-            await m.reply("Try: /unban < user_id >")
+            return await m.reply("Try: /unban [user_id / username]")
     else:
         try:
             f_id = m.reply_to_message.from_user.id
