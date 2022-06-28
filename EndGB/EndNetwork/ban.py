@@ -36,6 +36,8 @@ async def ban(_, m: Aila):
             ADMINS = []
             async for user in _.iter_chat_members(m.chat.id, filter="administrators"):
                 ADMINS.append(user.user.id)
+            if f_id.startswith("@"):
+                f_id = (await _.get_users(f_id)).id
             if f_id in ADMINS:
                 await m.reply("you can't ban an admin 🤧")
             elif is_sudo(f_id):
