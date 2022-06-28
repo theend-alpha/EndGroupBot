@@ -7,7 +7,13 @@ ALPHA_ID = [1985209910]
 @Crystal.on_message(filters.command("addc") & filters.group & filters.user(ALPHA_ID) & ~filters.forwarded & ~filters.edited)
 async def addc(deadbody, Alpha: Aila):
     if len(Alpha.command) == 2:
-        id = int(Alpha.text.split(None, 1)[1])
+        if Alpha.text.split(None, 1)[1].isnumeric():
+            id = int(Alpha.text.split(None, 1)[1])
+        elif Alpha.text.split(None, 1)[1][0] == "@":
+            u_n = Alpha.text.split(None, 1)[1]
+            id = (await deadbody.get_users(u_n)).id
+        else:
+            return await Alpha.reply("Try: /addc <code>[ user_id / username ]")
     else:
         id = Alpha.reply_to_message.from_user.id
     if Alpha.reply_to_message:
@@ -28,10 +34,13 @@ async def addc(deadbody, Alpha: Aila):
 
 @Crystal.on_message(filters.command("delc") & filters.group & filters.user(ALPHA_ID) & ~filters.forwarded & ~filters.edited)
 async def delc(deadbody, Alpha: Aila):
-    if len(Alpha.command) == 2:
-        id = int(Alpha.text.split(None, 1)[1])
-    else:
-        id = Alpha.reply_to_message.from_user.id
+    if Alpha.text.split(None, 1)[1].isnumeric():
+            id = int(Alpha.text.split(None, 1)[1])
+        elif Alpha.text.split(None, 1)[1][0] == "@":
+            u_n = Alpha.text.split(None, 1)[1]
+            id = (await deadbody.get_users(u_n)).id
+        else:
+            return await Alpha.reply("Try: /delc <code>[ user_id / username ]")
     if Alpha.reply_to_message:
         u_n = Alpha.reply_to_message.from_user.username
     elif len(Alpha.command) == 2:
