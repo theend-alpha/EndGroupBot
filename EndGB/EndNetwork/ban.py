@@ -15,6 +15,7 @@ async def ban(_, m: Aila):
         hehe = m.text.split(None, 1)[1]
         if hehe.isnumeric():
             f_id = hehe
+        elif hehe.isalpha():
         else:
             await m.reply("Try: /ban < user_id >")
     else:
