@@ -9,7 +9,6 @@ async def ban(_, m: Aila):
         return await m.reply("Either reply or use /ban < id > to ban")
     me = await _.get_chat_member(m.chat.id, 5507162172)
     if me.can_restrict_members is False:
-
         return await m.reply("I'm not having sufficient rights to ban users 🤧")
     i_id = m.from_user.id
     if len(m.command) == 2:
