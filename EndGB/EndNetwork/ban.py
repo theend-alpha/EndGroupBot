@@ -45,6 +45,8 @@ async def ban(_, m: Aila):
             else:
                 i_m = (await _.get_users(i_id)).mention
                 f_m = (await _.get_users(f_id)).mention
+                if not f_m:
+                    return await m.reply("user not found 🤧")
                 try:
                     await _.kick_chat_member(m.chat.id, f_id)
                 except:
