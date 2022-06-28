@@ -22,5 +22,13 @@ async def cc(_, m: Aila):
     for SCHAT in SCHATS:
         schat = str(SCHAT)
         msg += f"\n<code>{schat}</code>"
-    await m.reply(f"**Served chats** :-\n{msg}\n\n**Count** :- {len(SCHATS)}")
+    PUSERS = []
+    pusers = get_p_users()
+    for puser in pusers:
+        PUSERS.append(puser.chat_id)
+    lel = ""
+    for PUSER in PUSERS:
+        puser = str(PUSER)
+        lel += f"\n<code>{puser}</code>"
+    await m.reply(f"**Served chats** :-\n{msg}\n\n**Count** :- {len(SCHATS)}\n\n**Private users** :-\n{lel}\n\n**Count** :- {len(PUSERS)}")
 
