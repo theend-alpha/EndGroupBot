@@ -52,7 +52,10 @@ async def sudos(_, m: Aila):
         sudos = list_all_sudos()
         msg = """"""
         for sudo in sudos:
-            mention = (await _.get_users(sudo.id)).mention
+            try:
+                mention = (await _.get_users(sudo.id)).mention
+            except:
+                return await m.reply(f"**sudos** :- {len(sudos)}")       
             msg += f"\n• {mention} ({sudo.id})\n"
         if len(sudos) == 0:
             await m.reply("no sudo users")
