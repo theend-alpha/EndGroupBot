@@ -16,7 +16,7 @@ async def ban(_, m: Aila):
         if hehe.isnumeric():
             f_id = hehe
         elif hehe[0] == "@":
-            f_id = (await _.get_users(hehe)).id
+            f_id = hehe
         else:
             return await m.reply("Try: /ban [user_id / username]")
     else:
