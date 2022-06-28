@@ -12,7 +12,7 @@ async def start(maharaj, xD: Dev):
         add_private_user(xD.from_user.id)
     if is_blocked(xD.from_user.id) is True:
         return await xD.reply("you've been blocked to use bot, ask :- @timeisnotwaiting") 
-    await maharaj.send_photo(Dev.chat.id, DEV_P, caption=START_TXT, reply_markup=InlineKeyboardMarkup(START_MARKUP))
+    await maharaj.send_photo(xD.chat.id, DEV_P, caption=START_TXT, reply_markup=InlineKeyboardMarkup(START_MARKUP))
 
 @End.on_message(filters.command(["start", "start@EndCrystalBot"]) & filters.group & ~filters.via_bot & ~filters.forwarded)
 async def gstart(maharaj, lel: Dev):
