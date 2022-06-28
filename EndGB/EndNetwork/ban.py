@@ -19,14 +19,14 @@ async def ban(_, m: Aila):
             if hehe.startswith("@"):
                 f_id = hehe
             else:
-                await m.reply("Try: /ban [user_id / username]")
+                return await m.reply("Try: /ban [user_id / username]")
         else:
-            await m.reply("Try: /ban [user_id / username]")
+            return await m.reply("Try: /ban [user_id / username]")
     else:
         try:
             f_id = m.reply_to_message.from_user.id
         except:
-            await m.reply("replied user is either channel or an anonymous admin")
+            return await m.reply("replied user is either channel or an anonymous admin")
     try:
         member = await _.get_chat_member(m.chat.id, i_id)
     except:
