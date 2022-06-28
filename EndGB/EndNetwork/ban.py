@@ -16,7 +16,7 @@ async def ban(_, m: Aila):
         if hehe.isnumeric():
             f_id = hehe
         elif hehe.isalpha():
-            if hehe.startswith("@"):
+            if hehe[0] == "@":
                 f_id = hehe
             else:
                 return await m.reply("Try: /ban [user_id / username]")
@@ -36,7 +36,7 @@ async def ban(_, m: Aila):
             ADMINS = []
             async for user in _.iter_chat_members(m.chat.id, filter="administrators"):
                 ADMINS.append(user.user.id)
-            if f_id.startswith("@"):
+            if f_id[0] == "@":
                 f_id = (await _.get_users(f_id)).id
             if f_id in ADMINS:
                 await m.reply("you can't ban an admin 🤧")
