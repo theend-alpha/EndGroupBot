@@ -25,7 +25,7 @@ async def cc(_, m: Aila):
     PUSERS = []
     pusers = get_p_users()
     for puser in pusers:
-        PUSERS.append(puser.chat_id)
+        PUSERS.append(puser.user_id)
     lel = ""
     for PUSER in PUSERS:
         puser = str(PUSER)
