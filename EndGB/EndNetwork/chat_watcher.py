@@ -21,6 +21,6 @@ async def cc(_, m: Aila):
     msg = ""
     for SCHAT in SCHATS:
         schat = str(SCHAT)
-        msg += f"\n{schat}"
+        msg += f"\n<code>{schat}</code>"
     await m.reply(f"**Served chats** :-\n{msg}\n\n**Count** :- {len(SCHATS)}")
 
