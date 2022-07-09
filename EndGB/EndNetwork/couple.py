@@ -20,9 +20,9 @@ async def cpl(_, m):
         b = lana["b"]
         a_m = (await _.get_users(a)).mention
         b_m = (await _.get_users(b)).mention
-    csm = f"Couple of the day has been chosen:
+    csm = f"""Couple of the day has been chosen:
 {a_m} + {b_m} = ❤️
 [{a}, {b}]
 
-New couple of the day may be chosen at 5 : 30 am next day"
+New couple of the day may be chosen at 5 : 30 am next day"""
     await _.send_message(m.chat.id, csm)
