@@ -13,35 +13,9 @@ date = int(y_m_d[8:])
 async def cpl(_, m):
     if m.chat.type == "private":
         await m.reply("try this command in groups")
-    selected = await check_couple(date, month, year)
-    if selected:
-        lana = await get_couple(date, month, year)
-        a = lana["a"]
-        b = lana["b"]
-        a_m = (await _.get_users(a)).mention
-        b_m = (await _.get_users(b)).mention
-        csm = f"""Couple of the day has been chosen:
-{a_m} + {b_m} = ❤️
-[{a}, {b}]
-
-New couple of the day may be chosen at 5 : 30 am next day"""
-        await _.send_message(m.chat.id, csm)
-
-    else:
-        OMFOO = []
-        async for user in _.iter_chat_members(m.chat.id):
-            if not user.is_bot:
-                OMFOO.append(user.user.id)
-        a = random.choice(OMFOO)
-        b = random.choice(OMFOO)
-        while a == b:
-            b = random.choice(OMFOO)
-        a_m = (await _.get_users(a)).mention
-        b_m = (await _.get_users(b)).mention
-        csm = f"""Couple of the day has been chosen:
-{a_m} + {b_m} = ❤️
-[{a}, {b}]
-
-New couple of the day may be chosen at 5 : 30 am next day"""
-        await _.send_message(m.chat.id, csm)
-        await add_couple(a, b, date, month, year)
+    couples = await get_couples()
+    for couple in couples:
+        lel = couple.split()
+        if lel[2] == date and lel[3] == month and lel[4] == year:
+            c1 = int(lel[0])
+            c2 = int(lel[1])
