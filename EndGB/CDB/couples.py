@@ -2,23 +2,14 @@ from EndGB.CDB import db as rup
 
 couplesdb = rup.couples
 
-async def add_couple(a: int, b: int, d: int, m: int, y: int):
-    getter = await couplesdb.find_one({"a": a}, {"b": b}, {"d": d}, {"m": m}, {"y": y})
-    if getter:
-        return
-    await couplesdb.insert_one({"a": a}, {"b": b}, {"d": d}, {"m": m}, {"y": y})
+async def add_couple(a: str):
+    await couplesdb.insert_one({"a": a})
 
-async def check_couple(d: int, m: int, y: int):
-    getter = await couplesdb.find_one({"d": d}, {"m": m}, {"y": y}, {"a": {"$gt": 0}}, {"b": {"$gt": 0}})
-    if getter:
-        return True
-    else:
-        return False
-
-async def get_couple(d: int, m: int, y: int):
-    getter = await couplesdb.find_one({"d": d}, {"m": m}, {"y": y}, {"a": {"$gt": 0}}, {"b": {"$gt": 0}})
-    try:
-        return getter
-    except:
-        pass
-    
+async def check_couple():
+    lel = await couplesdb.find({"a": {}})
+    if not lel:
+        return []
+    OMFOO = []
+    for user in await lel.to_list(length=1000000000):
+        OMFOO.append(user)
+    return OMFOO
