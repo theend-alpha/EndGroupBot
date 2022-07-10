@@ -44,4 +44,4 @@ New couple of the day may be chosen at 5 : 30 am next day"""
 
 New couple of the day may be chosen at 5 : 30 am next day"""
         await _.send_message(m.chat.id, csm)
-        
+        await add_couple(a, b, date, month, year)
