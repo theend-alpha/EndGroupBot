@@ -19,3 +19,8 @@ async def cpl(_, m):
         if lel[2] == date and lel[3] == month and lel[4] == year:
             c1 = int(lel[0])
             c2 = int(lel[1])
+            c1_m = (await _.get_users(c1)).mention
+            c2_m = (await _.get_users(c2)).mention
+        csm = f"""Couple of the day:\n\n
+{c1_m} + {c2_m} = ❤️\n\n
+New couple of the day may be chosen at 5 : 30 am next day!"""
