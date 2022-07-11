@@ -2,6 +2,7 @@ from pyrogram import Client as Crystal, filters
 from pyrogram.types import Message as Aila
 from EndGB.CDB.couples import *
 import datetime as dt 
+import random
 
 year_month_date = dt.date.today()
 y_m_d = str(year_month_date)
