@@ -31,7 +31,7 @@ New couple of the day may be chosen at 5 : 30 am next day!"""
         return
     else:
         KIDS = []
-        async for user in _.iter_chat_members(m.chat.id)
+        async for user in _.iter_chat_members(m.chat.id):
             if user.user.is_bot:
                 return
             KIDS.append(user.user.id)
