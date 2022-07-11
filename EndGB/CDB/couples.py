@@ -6,7 +6,7 @@ async def add_couple(a: str):
     await couplesdb.insert_one({"a": a})
 
 async def get_couples():
-    lel = await couplesdb.find({"a": {"$gt": 0}})
+    lel = couplesdb.find({"a": {"$gt": 0}})
     if not lel:
         return []
     OMFOO = []
