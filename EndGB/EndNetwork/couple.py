@@ -22,10 +22,13 @@ async def cpl(_, m):
             c2 = int(lel[1])
             c1_m = (await _.get_users(c1)).mention
             c2_m = (await _.get_users(c2)).mention
-        csm = f"""Couple of the day:\n\n
+            csm = f"""Couple of the day:\n\n
 {c1_m} + {c2_m} = ❤️\n\n
 New couple of the day may be chosen at 5 : 30 am next day!"""
-        await _.send_message(m.chat.id, csm)
+            ok = await _.send_message(m.chat.id, csm)
+        
+        if ok:
+            return
         else:
             KIDS = []
             async for user in _.iter_chat_members(m.chat.id)
@@ -40,9 +43,12 @@ New couple of the day may be chosen at 5 : 30 am next day!"""
                 c2 = random.choice(KIDS)
             c1_m = (await _.get_users(c1)).mention
             c2_m = (await _.get_users(c2)).mention
-        csm = f"""Couple of the day:\n\n
+            csm = f"""Couple of the day:\n\n
 {c1_m} + {c2_m} = ❤️\n\n
 New couple of the day may be chosen at 5 : 30 am next day!"""
-        lel = f"{c1} {c2} {date} {month} {year}"
-        await add_couple(lel)
-        await _.send_message(m.chat.id, csm)
+            lel = f"{c1} {c2} {date} {month} {year}"
+            await add_couple(lel)
+            await _.send_message(m.chat.id, csm)
+
+
+     
